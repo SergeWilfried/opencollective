@@ -29,7 +29,7 @@ export default function IntlProvider({ children, locale }) {
   }, [selectedLocale]);
 
   const clientIntl = React.useMemo(
-    () => createIntl({ locale: selectedLocale, defaultLocale: 'en', messages }),
+    () => createIntl({ locale: selectedLocale, defaultLocale: 'fr', messages }),
     [messages],
   );
 

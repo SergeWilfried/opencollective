@@ -39,11 +39,11 @@ export default class IntlDocument extends Document {
     // In the browser, use the same values that the server serialized.
     const intlProps = getIntlProps(ctx);
     const messages = await getLocaleMessages(intlProps.locale);
-    const intl = createIntl({ locale: intlProps.locale, defaultLocale: 'en', messages }, cache);
+    const intl = createIntl({ locale: intlProps.locale, defaultLocale: 'fr', messages }, cache);
 
     if (ctx.req && ctx.res) {
-      if (intlProps.locale !== 'en') {
-        // Prevent server side caching of non english content
+      if (intlProps.locale !== 'fr') {
+        // Prevent server side caching of non french content
         ctx.res.setHeader('Cache-Control', 'no-store, no-cache, max-age=0');
       } else {
         // When using Cloudflare, there might be a default cache
