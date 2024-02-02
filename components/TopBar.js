@@ -244,7 +244,7 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
                 popupMarginTop="-10px"
               >
                 <NavLinkContainer>
-                  <a href="https://blog.opencollective.com/">
+                  <a href="https://#">
                     <NavItem as={Container} mt={16} mb={16}>
                       <FormattedMessage id="company.blog" defaultMessage="Blog" />
                     </NavItem>
@@ -254,7 +254,7 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
                       <FormattedMessage id="OC.e2c" defaultMessage="Exit to Community" />
                     </NavItem>
                   </Link>
-                  <a href="https://docs.opencollective.com/help/about/introduction">
+                  <a href="https://#">
                     <NavItem as={Container} mb={16}>
                       <FormattedMessage id="collective.about.title" defaultMessage="About" />
                     </NavItem>

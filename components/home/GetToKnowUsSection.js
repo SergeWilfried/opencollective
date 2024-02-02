@@ -109,12 +109,7 @@ const GetToKnowUs = () => {
               fontWeight="500"
               color="black.800"
             >
-              <StyledLink
-                color="black.800"
-                href="https://blog.opencollective.com/tag/case-studies/"
-                textDecoration="underline"
-                openInNewTab
-              >
+              <StyledLink color="black.800" href="#tag/case-studies/" textDecoration="underline" openInNewTab>
                 <FormattedMessage defaultMessage={'Case studies'} />
               </StyledLink>
             </StyledListItem>

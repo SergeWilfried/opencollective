@@ -159,7 +159,7 @@ const JoinUs = ({ page }) => (
           description={<FormattedMessage id="home.joinUsSection.getStarted" defaultMessage="Get started now!" />}
         />
         <JoinUsActionContainer
-          link="https://blog.opencollective.com/tag/case-studies/"
+          link="https://blog.com/tag/case-studies/"
           title={<FormattedMessage id="ReadOurStories" defaultMessage="Read our stories" />}
           description={
             <FormattedMessage
