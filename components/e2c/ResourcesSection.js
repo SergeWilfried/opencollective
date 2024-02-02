@@ -15,25 +15,25 @@ const blogEntries = [
   {
     imageSrc: '/static/images/e2c/blog-1.png',
     title: `Early musings on "Exit to Community" for Open Collective`,
-    link: 'https://blog.opencollective.com/exit-to-community/',
+    link: '#exit-to-community/',
     date: 'Oct 18 2021',
   },
   {
     imageSrc: '/static/images/e2c/blog-2.png',
     title: `Pathways for Open Collective’s “Exit to Community”`,
-    link: 'https://blog.opencollective.com/exit-to-community-part-2/',
+    link: '#exit-to-community-part-2/',
     date: 'Oct 24 2021',
   },
   {
     imageSrc: '/static/images/e2c/blog-3.png',
     title: `Building Capacity for Exit to Community`,
-    link: 'https://blog.opencollective.com/e2c-capacity-building/',
+    link: '#e2c-capacity-building/',
     date: 'Mar 7 2022',
   },
   {
     imageSrc: '/static/images/e2c/blog-4.png',
     title: `Deep dive: community stewardship of Open Collective through a Perpetual Purpose Trust`,
-    link: 'https://blog.opencollective.com/ppt/',
+    link: '#ppt/',
     date: 'Mar 10 2022',
   },
 ];

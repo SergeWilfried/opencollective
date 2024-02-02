@@ -161,7 +161,7 @@ const TopBarMobileMenu = ({ closeMenu, useDashboard, onHomeRoute }) => {
                 {state.viewCompanyMenu && (
                   <Box as="ul" my={2} pl="12px">
                     <SubListItem>
-                      <a href="https://blog.opencollective.com/" onClick={closeMenu}>
+                      <a href="https://#" onClick={closeMenu}>
                         <FormattedMessage id="company.blog" defaultMessage="Blog" />
                       </a>
                     </SubListItem>
@@ -204,7 +204,7 @@ const TopBarMobileMenu = ({ closeMenu, useDashboard, onHomeRoute }) => {
             background="#F7F8FA"
             justifyContent="space-between"
           >
-            <StyledLink href="https://blog.opencollective.com/" openInNewTab onClick={closeMenu}>
+            <StyledLink href="https://" openInNewTab onClick={closeMenu}>
               <StyledRoundButton size={40}>
                 <Blog size={17} color="#9D9FA3" />
               </StyledRoundButton>
@@ -214,17 +214,17 @@ const TopBarMobileMenu = ({ closeMenu, useDashboard, onHomeRoute }) => {
                 <Twitter size={17} color="#9D9FA3" />
               </StyledRoundButton>
             </StyledLink>
-            <StyledLink href="https://github.com/opencollective" openInNewTab onClick={closeMenu}>
+            <StyledLink href="https://github.com" openInNewTab onClick={closeMenu}>
               <StyledRoundButton size={40}>
                 <Github size={17} color="#9D9FA3" />
               </StyledRoundButton>
             </StyledLink>
-            <StyledLink href="https://slack.opencollective.com" openInNewTab onClick={closeMenu}>
+            <StyledLink href="https://slack.com" openInNewTab onClick={closeMenu}>
               <StyledRoundButton size={40}>
                 <Slack size={17} color="#9D9FA3" />
               </StyledRoundButton>
             </StyledLink>
-            <StyledLink href="mailto:info@opencollective.com" openInNewTab onClick={closeMenu}>
+            <StyledLink href="mailto:info@doohicollective.com" openInNewTab onClick={closeMenu}>
               <StyledRoundButton size={40}>
                 <Mail size={19} color="#9D9FA3" />
               </StyledRoundButton>
