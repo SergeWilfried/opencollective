@@ -56,9 +56,6 @@ jobs:
   depcheck:
     runs-on: ubuntu-latest
 
-    # Disable because we get an unrelated error after updating the Sentry config: https://github.com/opencollective/opencollective/issues/7254
-    if: ${{ false }}
-
     timeout-minutes: 15
 
     steps:
@@ -71,6 +68,22 @@ jobs:
           CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
 
       - run: npm run depcheck
+
+  find-unused-exports:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run find-unused-exports
 
   check-langs:
     runs-on: ubuntu-latest

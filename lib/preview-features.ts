@@ -3,7 +3,6 @@
  */
 export enum PREVIEW_FEATURE_KEYS {
   DASHBOARD = 'dashboard',
-  EXPENSE_PIPELINE = 'EXPENSE_PIPELINE',
   EXPENSE_CATEGORIZATION = 'EXPENSE_CATEGORIZATION',
   DYNAMIC_TOP_BAR = 'DYNAMIC_TOP_BAR',
   COLLECTIVE_OVERVIEW = 'COLLECTIVE_OVERVIEW',
@@ -41,13 +40,6 @@ export const previewFeatures: PreviewFeature[] = [
     dependsOn: PREVIEW_FEATURE_KEYS.DASHBOARD,
   },
   {
-    key: PREVIEW_FEATURE_KEYS.EXPENSE_PIPELINE,
-    title: 'Host Expense Pipeline',
-    description: 'Introducing tabs in the host expenses dashboard to help you manage paying expenses.',
-    publicBeta: false,
-    closedBetaAccessFor: ['opencollective', 'opensource', 'foundation', 'europe', 'design', 'engineering'],
-  },
-  {
     key: PREVIEW_FEATURE_KEYS.EXPENSE_CATEGORIZATION,
     title: 'Expense categorization',
     description: 'Facilitate your accounting by categorizing your expenses according to a chart of accounts.',
@@ -59,7 +51,7 @@ export const previewFeatures: PreviewFeature[] = [
     key: PREVIEW_FEATURE_KEYS.COLLECTIVE_OVERVIEW,
     title: 'Collective Overview',
     description: 'Overview page for Collectives in Dashboard',
-    publicBeta: false,
+    publicBeta: true,
     alwaysEnableInDev: true,
     enabledByDefaultFor: ['*'],
     closedBetaAccessFor: ['opencollective', 'opensource', 'foundation', 'europe', 'design', 'engineering'],
