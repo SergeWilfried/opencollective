@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/nextjs';
 import { pick } from 'lodash';
 import { NextPageContext } from 'next';
 
-const supportedLanguages = ['en'];
+const supportedLanguages = ['en', 'fr'];
 
 const languages = require.context('../../lang', false, /\.json$/i, 'weak');
 languages.keys().forEach(element => {

@@ -126,7 +126,6 @@ export const regularFooterItems: Item[] = [
   {
     label: <FormattedMessage id="community" defaultMessage="Community" />,
     items: [
-
       {
         label: <FormattedMessage id="menu.docs" defaultMessage="Docs & Help" />,
         href: '/help',
