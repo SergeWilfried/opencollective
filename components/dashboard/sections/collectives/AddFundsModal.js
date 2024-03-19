@@ -536,7 +536,7 @@ const AddFundsModal = ({ collective, ...props }) => {
                       htmlFor="addFunds-processedAt"
                       inputType="date"
                       hint={
-                        <FormattedMessage defaultMessage="The date funds were cleared on your bank, Wise, PayPal, Stripe or any other external account holding these funds." />
+                        <FormattedMessage defaultMessage="The date funds were cleared on your bank, Wise, PayPal, Julaya, Stripe or any other external account holding these funds." />
                       }
                       label={<FormattedMessage defaultMessage="Effective Date" />}
                       mt={3}
