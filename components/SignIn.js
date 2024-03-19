@@ -124,7 +124,7 @@ export default class SignIn extends React.Component {
       <React.Fragment>
         <Head>
           {/* Add title hint for 1password and perhaps other password managers*/}
-          <title>Sign In - Open Collective</title>
+          <title>Sign In - Doohi</title>
         </Head>
         <Box maxWidth={390} px={['20px', 0]}>
           {this.props.isOAuth ? (

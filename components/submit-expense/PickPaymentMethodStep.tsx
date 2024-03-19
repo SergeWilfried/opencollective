@@ -295,7 +295,7 @@ function PickPaymentMethodStepListItem(props: { className?: string; form: Expens
 function PayoutMethodIcon(props: { payoutMethod: PayoutMethod }) {
   switch (props.payoutMethod.type) {
     case PayoutMethodType.ACCOUNT_BALANCE:
-      return <Image alt="Open Collective" src="/static/images/oc-logo-watercolor-256.png" height={16} width={16} />;
+      return <Image alt="Doohi" src="/static/images/oc-logo-watercolor-256.png" height={16} width={16} />;
     case PayoutMethodType.BANK_ACCOUNT:
       return <Landmark size={16} />;
     case PayoutMethodType.OTHER:

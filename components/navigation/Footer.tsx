@@ -63,7 +63,7 @@ const Footer = () => {
               <Link href="/home">
                 <Image
                   src="/static/images/opencollectivelogo-footer-n.svg"
-                  alt="Open Collective"
+                  alt="Doohi"
                   height={28}
                   width={167}
                 />
@@ -131,7 +131,7 @@ const Footer = () => {
             <Link href="/">
               <Image
                 src="/static/images/opencollectivelogo-footer-n.svg"
-                alt="Open Collective"
+                alt="Doohi"
                 height={28}
                 width={167}
               />
