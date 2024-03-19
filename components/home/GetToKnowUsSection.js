@@ -111,7 +111,7 @@ const GetToKnowUs = () => {
             >
               <StyledLink
                 color="black.800"
-                href="https://blog.opencollective.com/tag/case-studies/"
+                href="https://blog.doohi.com/tag/case-studies/"
                 textDecoration="underline"
                 openInNewTab
               >

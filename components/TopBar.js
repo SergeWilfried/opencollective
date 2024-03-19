@@ -238,7 +238,7 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
                 popupMarginTop="-10px"
               >
                 <NavLinkContainer>
-                  <a href="https://blog.opencollective.com/">
+                  <a href="https://blog.doohi.com/">
                     <NavItem as={Container} mt={16} mb={16}>
                       <FormattedMessage id="company.blog" defaultMessage="Blog" />
                     </NavItem>

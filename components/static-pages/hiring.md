@@ -4,7 +4,7 @@
 
 Do you want to get paid to work on your passion for open source, mutual aid, and the commons, while earning a good livelihood and having great work-life balance? Come work with us!
 
-![](https://blog.opencollective.com/content/images/2022/10/P1199711-ANIMATION.gif)
+![](https://blog.doohi.com/content/images/2022/10/P1199711-ANIMATION.gif)
 
 Open Collective is a financial and legal toolbox for grassroots groups. We support 15,000 groups and 30+ nonprofits around the world with one shared backend solution for fundraising and money management. This year our Collectives are on track to raise and spend $35 million dollars in full transparency.
 
@@ -69,7 +69,7 @@ Not required, but a bonus:
 
 “Open Collective” means transparency (“Open”) and community (“Collective”), and thus our platform is built on values of openness, transparency, and collective collaboration. The team is a group of optimistic, driven, nerdy, and open people. Our culture, though ever-changing and sometimes chaotic like many start-ups, is also oriented toward care, candor, rigor, generosity, and autonomy. (You can read more about our values in our [Community Guidelines](https://docs.doohi.com/help/about/the-open-collective-way/community-guidelines).)
 
-Our international, fully-remote, highly-collaborative team currently includes members in Spain, France, Belgium, Germany, the UK, Romania, the United States, Mexico, Canada, Indonesia, Brazil, India, and New Zealand. To learn more about the company, [watch this 50-second video](https://www.youtube.com/watch?v=SfHeSpoSHTM), skim through our [blog](https://blog.opencollective.com), and read about our [strategy](https://blog.opencollective.com/oc-strategy-2023-2024/). We look forward to learning more about you, too!
+Our international, fully-remote, highly-collaborative team currently includes members in Spain, France, Belgium, Germany, the UK, Romania, the United States, Mexico, Canada, Indonesia, Brazil, India, and New Zealand. To learn more about the company, [watch this 50-second video](https://www.youtube.com/watch?v=SfHeSpoSHTM), skim through our [blog](https://blog.opencollective.com), and read about our [strategy](https://blog.doohi.com/oc-strategy-2023-2024/). We look forward to learning more about you, too!
 
 ### The support team
 
@@ -90,7 +90,7 @@ We’d love to hear from you. Applications are open through June 2nd. [To apply]
 
 $60k/year for 40 hrs/wk (or 30 hrs/wk pro rata). Must live in the US. Applications open until March 24th.
 
-[Open Collective Foundation (OCF)](http://opencollective.foundation/) is a nonprofit fiscal sponsor with an open source tech platform, that is enabling 500+ groups to access 501(c)(3) status and fundraise in full transparency. [Our Collectives](https://opencollective.com/foundation#category-CONTRIBUTIONS) include mutual aid groups, public interest open source tech, social justice movements, humanitarian aid, climate action, and many kinds of communities with missions focused on education, civic engagement, and positive social impact. [Solidarity is our guiding principle](https://blog.opencollective.com/solidarity-as-our-guiding-principle/). Our Collectives raised over $30m in 2022, representing 100x growth since 2019. We are scaling our team to meet increasing demand.
+[Open Collective Foundation (OCF)](http://opencollective.foundation/) is a nonprofit fiscal sponsor with an open source tech platform, that is enabling 500+ groups to access 501(c)(3) status and fundraise in full transparency. [Our Collectives](https://opencollective.com/foundation#category-CONTRIBUTIONS) include mutual aid groups, public interest open source tech, social justice movements, humanitarian aid, climate action, and many kinds of communities with missions focused on education, civic engagement, and positive social impact. [Solidarity is our guiding principle](https://blog.doohi.com/solidarity-as-our-guiding-principle/). Our Collectives raised over $30m in 2022, representing 100x growth since 2019. We are scaling our team to meet increasing demand.
 
 ### What Makes Us Different
 
@@ -99,10 +99,10 @@ OCF is a tech-first nonprofit. We are one node in a growing international networ
 ### Learn more
 
 - [Website](https://opencollective.foundation/)
-- [2022 year in review](https://blog.opencollective.com/ocf-2022/)
+- [2022 year in review](https://blog.doohi.com/ocf-2022/)
 - [2-minute explainer video](https://youtu.be/269SyUQmL_U)
 - [Values & Mission](https://docs.opencollective.foundation/about/mission-and-values)
-- [Blog](https://blog.opencollective.com/tag/ocf/)
+- [Blog](https://blog.doohi.com/tag/ocf/)
 - [Team](https://docs.opencollective.foundation/about/team)
 - [Documentation](https://docs.opencollective.foundation/)
 
@@ -160,7 +160,7 @@ OSC is a tech-first nonprofit. We are one node in a growing international networ
 
 ### Learn more
 
-- OSC's [Website](https://www.oscollective.org/), [mission & values](https://docs.oscollective.org/mission-values-and-strategy), and [strategy](https://blog.opencollective.com/open-source-collectives-strategy-2022-2025/)
+- OSC's [Website](https://www.oscollective.org/), [mission & values](https://docs.oscollective.org/mission-values-and-strategy), and [strategy](https://blog.doohi.com/open-source-collectives-strategy-2022-2025/)
 - [What is Open Source Collective (video)](https://www.youtube.com/watch?v=ubfYuAMm3_c)
 - [What is Open Collective (video)](https://www.youtube.com/@OpenCollective)
 - [Our documentation](https://docs.oscollective.org/)

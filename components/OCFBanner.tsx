@@ -9,7 +9,7 @@ const Message = ({ params }) => (
   <React.Fragment>
     To find out more information about the situation and your options, {''}
     <a
-      href="https://blog.opencollective.com/open-collective-official-statement-ocf-dissolution/"
+      href="https://blog.doohi.com/open-collective-official-statement-ocf-dissolution/"
       target="_blank"
       className="font-semibold"
       rel="noreferrer"

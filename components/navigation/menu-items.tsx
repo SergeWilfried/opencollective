@@ -38,7 +38,7 @@ export const landingPageItems: Item[] = [
     items: [
       {
         label: <FormattedMessage id="company.blog" defaultMessage="Blog" />,
-        href: 'https://blog.opencollective.com/',
+        href: 'https://blog.doohi.com/',
       },
       {
         label: <FormattedMessage id="collective.about.title" defaultMessage="About" />,
@@ -74,7 +74,7 @@ export const regularFooterItems: Item[] = [
     items: [
       {
         label: <FormattedMessage id="platform.explainerVideo" defaultMessage="Explainer video" />,
-        href: 'https://www.youtube.com/watch?v=IBU5fSILAe8',
+        href: '#',
       },
       {
         label: <FormattedMessage id="howItWorks" defaultMessage="How it works" />,
@@ -82,7 +82,7 @@ export const regularFooterItems: Item[] = [
       },
       {
         label: <FormattedMessage id="platform.useCases" defaultMessage="Use cases" />,
-        href: 'https://blog.opencollective.com/tag/case-studies/',
+        href: 'https://blog.doohi.com/tag/case-studies/',
       },
       {
         label: <FormattedMessage id="platform.signup" defaultMessage="Sign up" />,
@@ -142,7 +142,7 @@ export const regularFooterItems: Item[] = [
       },
       {
         label: <FormattedMessage id="company.blog" defaultMessage="Blog" />,
-        href: 'https://blog.opencollective.com/',
+        href: 'https://blog.doohi.com/',
       },
       {
         label: <FormattedMessage id="company.hiring" defaultMessage="Hiring" />,
