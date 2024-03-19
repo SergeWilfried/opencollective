@@ -3171,7 +3171,7 @@
   "TransactionsOverview": "Składki i Wydatki",
   "transferwise.error.balance.payment-option-unavailable": "Nie można dokonać transferu środków. Sprawdź stan swojego konta i spróbuj ponownie.",
   "transferwise.error.currencyNotSupported": "Podana waluta nie jest obsługiwana",
-  "transferwise.error.default": "Wystąpił nieznany błąd z Wise. Prosimy o kontakt z support@opencollective.com.",
+  "transferwise.error.default": "Wystąpił nieznany błąd z Wise. Prosimy o kontakt z assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Niewystarczająca ilość środków na Twoim saldzie w walucie {currency}. Proszę doładować swoje konto i spróbować ponownie.",
   "transferwise.error.notConnected": "Gospodarz nie jest podłączony do Wise",
   "tSQ2Fc": "Twój e-mail z resetem hasła jest w drodze.",

@@ -4,7 +4,7 @@
 
 These Terms of Service ("**Terms**") apply to your access to and use of the websites, applications and other online products and services (collectively, our “**Platform**”) provided by Open Collective Inc. (“**Open Collective**” or “**we**”). **By creating an account or otherwise accessing the Platform, you agree to these Terms. If you do not agree to these Terms, including the mandatory arbitration provision and class action waiver in Section 18 that applies to residents of the United States, do not access or use our Platform.**
 
-If you have any questions about these Terms, you may contact us at [support@opencollective.com](mailto:support@opencollective.com). Please refer to our [Privacy Policy](/privacypolicy) for information about how we collect, use and disclose information about you.
+If you have any questions about these Terms, you may contact us at [assistance@doohi.com](mailto:assistance@doohi.com). Please refer to our [Privacy Policy](/privacypolicy) for information about how we collect, use and disclose information about you.
 
 ## 1. Overview of Our Platform
 
@@ -206,7 +206,7 @@ To the fullest extent permitted by applicable law, you release Open Collective a
 
 (d) ANY CLAIM ARISING OUT OF OR RELATED TO THESE TERMS OR OUR PLATFORM MUST BE FILED WITHIN ONE YEAR AFTER SUCH CLAIM AROSE; OTHERWISE, THE CLAIM IS PERMANENTLY BARRED, WHICH MEANS THAT YOU AND OPEN COLLECTIVE WILL NOT HAVE THE RIGHT TO ASSERT THE CLAIM.
 
-(e) You have the right to opt out of binding arbitration within thirty (30) days of the date you first accepted the terms of this Section 18 by contacting us at [support@opencollective.com](mailto:support@opencollective.com). In order to be effective, the opt out notice must include your full name and clearly indicate your intent to opt out of binding arbitration. By opting out of binding arbitration, you are agreeing to resolve Disputes in accordance with Section 19.
+(e) You have the right to opt out of binding arbitration within thirty (30) days of the date you first accepted the terms of this Section 18 by contacting us at [assistance@doohi.com](mailto:assistance@doohi.com). In order to be effective, the opt out notice must include your full name and clearly indicate your intent to opt out of binding arbitration. By opting out of binding arbitration, you are agreeing to resolve Disputes in accordance with Section 19.
 
 ## 21. Governing Law and Venue
 

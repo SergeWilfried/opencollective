@@ -227,7 +227,7 @@ const LearnMore = ({ page }) => {
             <P color="black.700" fontSize="18px" lineHeight="27px" letterSpacing="-0.2px" my={3}>
               <FormattedMessage
                 id="home.contributeToPlatform.description"
-                defaultMessage="Open Collective is free for charitable initiatives. We rely on generosity of contributors like you to make this possible."
+                defaultMessage="Doohi Collective is free for charitable initiatives. We rely on generosity of contributors like you to make this possible."
               />
             </P>
           </Box>

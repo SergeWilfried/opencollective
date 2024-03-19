@@ -46,21 +46,21 @@ export const ErrorFallbackLinks = ({
   return (
     <LinksContainer>
       {showHome && (
-        <Link href="https://opencollective.com/">
+        <Link href="https://doohi.com/">
           <FormattedMessage id="home" defaultMessage="Home" />
         </Link>
       )}
-      {showSlack && <Link href="https://slack.opencollective.com/">Slack</Link>}
-      <Link href="https://opencollective.com/discover">
+      {showSlack && <Link href="https://slack.doohi.com/">Slack</Link>}
+      <Link href="https://doohi.com/discover">
         {showDiscover && <FormattedMessage id="menu.discover" defaultMessage="Discover" />}
       </Link>
       {showDocumentation && (
-        <Link href="https://docs.opencollective.com">
+        <Link href="https://docs.doohi.com">
           <FormattedMessage id="menu.documentation" defaultMessage="Documentation" />
         </Link>
       )}
       {showSupport && (
-        <Link href="mailto:support@opencollective.com">
+        <Link href="mailto:assistance@doohi.com">
           <FormattedMessage id="community.support" defaultMessage="Support" />
         </Link>
       )}

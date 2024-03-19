@@ -38,6 +38,13 @@ const PaymentMethodTypeWithIcon = ({ isLoading, type, iconSize }) => {
           <Span ml={2}>{i18nPaymentMethodType(intl, type)}</Span>
         </Flex>
       );
+    case PAYMENT_METHOD_TYPE.MOBILE_MONEY:
+      return (
+        <Flex alignItems="center">
+          <CreditCard size={iconSize} color="#9D9FA3" />
+          <Span ml={2}>{i18nPaymentMethodType(intl, type)}</Span>
+        </Flex>
+      );
     case PAYMENT_METHOD_TYPE.ALIPAY:
       return (
         <Flex alignItems="center">

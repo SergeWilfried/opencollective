@@ -3171,7 +3171,7 @@
   "TransactionsOverview": "Contributions and Expenses",
   "transferwise.error.balance.payment-option-unavailable": "Unable to fund transfer. Please check your balance and try again.",
   "transferwise.error.currencyNotSupported": "This currency is not supported",
-  "transferwise.error.default": "An unknown error happened with Wise. Please contact support@opencollective.com.",
+  "transferwise.error.default": "An unknown error happened with Wise. Please contact assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Not enough funds in your {currency} balance. Please top up your account and try again.",
   "transferwise.error.notConnected": "Host is not connected to Wise",
   "tSQ2Fc": "비밀번호를 재설정하는 이메일을 발송했어요",

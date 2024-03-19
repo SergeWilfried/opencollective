@@ -248,21 +248,7 @@ const GetToKnowUs = () => {
               }
             />
           </P>
-          <Box display={['none', null, 'block']} mt="24px">
-            <Link href="/e2c">
-              <StyledButton
-                minWidth="135px"
-                my={['12px', null, 0]}
-                buttonStyle="marketing"
-                whiteSpace="nowrap"
-                backgroundColor="primary.900"
-                fontSize="16px"
-                lineHeight="20px"
-              >
-                <FormattedMessage defaultMessage="Learn more" />
-              </StyledButton>
-            </Link>
-          </Box>
+ 
         </Box>
       </Flex>
     </Flex>

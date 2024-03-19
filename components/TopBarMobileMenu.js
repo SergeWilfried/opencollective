@@ -165,11 +165,7 @@ const TopBarMobileMenu = ({ closeMenu, useDashboard, onHomeRoute }) => {
                         <FormattedMessage id="company.blog" defaultMessage="Blog" />
                       </a>
                     </SubListItem>
-                    <SubListItem>
-                      <Link href={'/e2c'} onClick={closeMenu}>
-                        <FormattedMessage id="OC.e2c" defaultMessage="Exit to Community" />
-                      </Link>
-                    </SubListItem>
+
                   </Box>
                 )}
               </ListItem>
@@ -214,12 +210,7 @@ const TopBarMobileMenu = ({ closeMenu, useDashboard, onHomeRoute }) => {
                 <Twitter size={17} color="#9D9FA3" />
               </StyledRoundButton>
             </StyledLink>
-            <StyledLink href="https://github.com/opencollective" openInNewTab onClick={closeMenu}>
-              <StyledRoundButton size={40}>
-                <Github size={17} color="#9D9FA3" />
-              </StyledRoundButton>
-            </StyledLink>
-            <StyledLink href="https://slack.opencollective.com" openInNewTab onClick={closeMenu}>
+            <StyledLink href="#" openInNewTab onClick={closeMenu}>
               <StyledRoundButton size={40}>
                 <Slack size={17} color="#9D9FA3" />
               </StyledRoundButton>

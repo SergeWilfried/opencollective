@@ -3171,7 +3171,7 @@
   "TransactionsOverview": "Príspevky a výdavky",
   "transferwise.error.balance.payment-option-unavailable": "Nie je možné uskutočniť prevod. Skontrolujte, prosím, váš zostatok a skúste to znova.",
   "transferwise.error.currencyNotSupported": "Táto mena nie je podporovaná",
-  "transferwise.error.default": "V systéme Wise došlo k neznámej chybe. Obráťte sa na support@opencollective.com.",
+  "transferwise.error.default": "V systéme Wise došlo k neznámej chybe. Obráťte sa na assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Nemáte dostatok prostriedkov na vašom zostatku v {currency}. Prosím, doplňte si prostriedky na účte a skúste to znova.",
   "transferwise.error.notConnected": "Hostiteľ nie je pripojený k službe Wise",
   "tSQ2Fc": "Your reset password email is on its way.",

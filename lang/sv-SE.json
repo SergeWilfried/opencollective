@@ -3171,7 +3171,7 @@
   "TransactionsOverview": "Bidrag och utgifter",
   "transferwise.error.balance.payment-option-unavailable": "Det fanns inte teckning för överföringen. Kontrollera ditt saldo och försök igen.",
   "transferwise.error.currencyNotSupported": "Denna valuta stöds inte",
-  "transferwise.error.default": "Ett okänt fel inträffade med Wise. Kontakta support@opencollective.com.",
+  "transferwise.error.default": "Ett okänt fel inträffade med Wise. Kontakta assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Inte tillräckligt med pengar i {currency} -konto. Kontrollera saldot och försök igen.",
   "transferwise.error.notConnected": "Värden är inte ansluten till Wise",
   "tSQ2Fc": "Your reset password email is on its way.",

@@ -3171,7 +3171,7 @@
   "TransactionsOverview": "捐款和支出",
   "transferwise.error.balance.payment-option-unavailable": "Unable to fund transfer. Please check your balance and try again.",
   "transferwise.error.currencyNotSupported": "该币种不支持",
-  "transferwise.error.default": "An unknown error happened with Wise. Please contact support@opencollective.com.",
+  "transferwise.error.default": "An unknown error happened with Wise. Please contact assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Not enough funds in your {currency} balance. Please top up your account and try again.",
   "transferwise.error.notConnected": "托管方未连接到 Wise",
   "tSQ2Fc": "Your reset password email is on its way.",

@@ -41,10 +41,6 @@ export const landingPageItems: Item[] = [
         href: 'https://blog.opencollective.com/',
       },
       {
-        label: <FormattedMessage id="OC.e2c" defaultMessage="Exit to Community" />,
-        href: '/e2c',
-      },
-      {
         label: <FormattedMessage id="collective.about.title" defaultMessage="About" />,
         href: 'https://docs.opencollective.com/help/about/introduction',
       },
@@ -130,10 +126,7 @@ export const regularFooterItems: Item[] = [
   {
     label: <FormattedMessage id="community" defaultMessage="Community" />,
     items: [
-      {
-        label: <FormattedMessage id="community.openSource" defaultMessage="Open Source" />,
-        href: 'https://github.com/opencollective/opencollective/issues',
-      },
+
       {
         label: <FormattedMessage id="menu.docs" defaultMessage="Docs & Help" />,
         href: '/help',
@@ -155,10 +148,7 @@ export const regularFooterItems: Item[] = [
         label: <FormattedMessage id="company.hiring" defaultMessage="Hiring" />,
         href: '/hiring',
       },
-      {
-        label: <FormattedMessage id="e2c.title" defaultMessage="Exit to Community #E2C" />,
-        href: '/e2c',
-      },
+    
       {
         label: <FormattedMessage id="company.termsOfService" defaultMessage="Terms of service" />,
         href: '/tos',
