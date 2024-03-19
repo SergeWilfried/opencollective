@@ -52,12 +52,12 @@ class Header extends React.Component {
       if (this.props.collective) {
         title = this.props.collective.name;
       } else {
-        title = `Doohi Collective - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
+        title = `Doohi - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
       }
     }
 
-    if (!title.match(/Doohi Collective/i)) {
-      title = `${title} - Doohi Collective`;
+    if (!title.match(/Doohi/i)) {
+      title = `${title} - Doohi`;
     }
 
     return title;
@@ -75,8 +75,8 @@ class Header extends React.Component {
     const title = this.props.title || (collective && collective.name);
     const image = this.props.image || (collective && getCollectiveImage(collective));
     const description = this.props.description || collective?.description || collective?.longDescription;
-    const metaTitle = this.props.metaTitle || (title ? `${title} - Doohi Collective` : 'Doohi Collective');
-    const defaultImage = `https://opencollective.com/static/images/opencollective-og.png`;
+    const metaTitle = this.props.metaTitle || (title ? `${title} - Doohi` : 'Doohi');
+    const defaultImage = `https://doohi.progiciel.co/static/images/opencollective-og.png`;
 
     const metas = [
       { property: 'twitter:site', content: '@doohi' },
@@ -89,6 +89,7 @@ class Header extends React.Component {
       { property: 'twitter:description', content: truncate(description, 256) },
       { property: 'twitter:image', content: image || defaultImage },
       { property: 'og:title', content: metaTitle },
+      
     ];
 
     if (noRobots || (collective && collective.isIncognito)) {
