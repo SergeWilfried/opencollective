@@ -43,7 +43,7 @@ export const I18nPrivacyLink = msg => (
 
 export const I18nWithColumn = item => <FormattedMessage id="withColon" defaultMessage="{item}:" values={{ item }} />;
 
-export const WebsiteName = 'Doohi Collective';
+export const WebsiteName = 'Doohi';
 
 const I18nFormatters = {
   strong: I18nBold,

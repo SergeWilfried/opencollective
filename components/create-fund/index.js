@@ -41,7 +41,7 @@ class CreateFund extends Component {
     if (this.props.router.query.category === 'foundation') {
       return {
         slug: 'foundation',
-        name: 'Open Collective Foundation',
+        name: 'Doohi Foundation',
         termsUrl:
           'https://docs.google.com/document/u/2/d/e/2PACX-1vQ_fs7IOojAHaMBKYtaJetlTXJZLnJ7flIWkwxUSQtTkWUMtwFYC2ssb-ooBnT-Ldl6wbVhNQiCkSms/pub',
         faqUrl: 'https://docs.opencollective.foundation/',
@@ -50,7 +50,7 @@ class CreateFund extends Component {
     if (this.props.router.query.category === 'opensource') {
       return {
         slug: 'opensource',
-        name: 'Open Source Collective',
+        name: 'Code Collective',
         termsUrl:
           'https://docs.google.com/document/u/1/d/e/2PACX-1vQbiyK2Fe0jLdh4vb9BfHY4bJ1LCo4Qvy0jg9P29ZkiC8y_vKJ_1fNgIbV0p6UdvbcT8Ql1gVto8bf9/pub',
       };
@@ -58,14 +58,14 @@ class CreateFund extends Component {
     if (this.props.router.query.category === 'europe') {
       return {
         slug: 'europe',
-        name: 'Open Collective Europe',
+        name: 'Doohi Europe',
         termsUrl: 'https://docs.doohi.com/oceurope/getting-started/our-terms-and-conditions',
       };
     }
     if (this.props.router.query.category === 'oce-foundation') {
       return {
         slug: 'oce-foundation',
-        name: 'Open Collective Europe Foundation',
+        name: 'Doohi Europe Foundation',
         termsUrl: 'https://docs.doohi.com/oceurope/getting-started/our-terms-and-conditions',
       };
     }
@@ -108,7 +108,7 @@ class CreateFund extends Component {
           <Flex flexDirection="column" p={4} mt={2}>
             <Box mb={3}>
               <H1 fontSize="32px" lineHeight="36px" fontWeight="bold" textAlign="center">
-                <FormattedMessage id="collective.create.join" defaultMessage="Join Open Collective" />
+                <FormattedMessage id="collective.create.join" defaultMessage="Join Doohi" />
               </H1>
             </Box>
             <Box textAlign="center">

@@ -41,7 +41,7 @@ export const WHO_IS_FISCAL_HOSTING_FOR = {
 export const HOSTS = [
   {
     id: 'OCF',
-    name: 'Open Collective Foundation',
+    name: 'Doohi Foundation',
     location: '🇺🇸 United States',
     collectivePath: '/foundation/apply',
     bgImage: 'ocf',
@@ -49,7 +49,7 @@ export const HOSTS = [
   },
   {
     id: 'OSC',
-    name: 'Open Source Collective',
+    name: 'Code Collective',
     location: '🇺🇸 United States',
     collectivePath: '/opensource/apply',
     bgImage: 'osc',
@@ -57,7 +57,7 @@ export const HOSTS = [
   },
   {
     id: 'OCE',
-    name: 'Open Collective Europe',
+    name: 'Doohi Europe',
     location: ' 🇪🇺 Europe',
     collectivePath: '/europe/apply',
     bgImage: 'oce-bg',
@@ -65,7 +65,7 @@ export const HOSTS = [
   },
   {
     id: 'OCN',
-    name: 'Open Collective NZ',
+    name: 'Doohi NZ',
     location: '🇳🇿 New Zealand',
     collectivePath: '/ocnz/apply',
     bgImage: 'ocn-bg',
@@ -73,7 +73,7 @@ export const HOSTS = [
   },
   {
     id: 'socialchangenestcollective',
-    name: 'Social Change Nest',
+    name: 'Tékkré',
     location: '🇬🇧 United Kingdom',
     collectivePath: '/the-social-change-nest/apply',
     bgImage: 'socialchangenest',
@@ -81,7 +81,7 @@ export const HOSTS = [
   },
   {
     id: 'allForClimate',
-    name: 'All for climate',
+    name: 'Farafina',
     location: ' 🇪🇺 Europe',
     collectivePath: '/allforclimate/apply',
     bgImage: 'allforclimate-collective-bg',

@@ -31,20 +31,20 @@ const SocialLink = ({ href, children, ...props }) => (
 const SocialLinks = ({ className }: { className?: string }) => {
   return (
     <div className={cn('flex items-center gap-1', className)}>
-      <SocialLink href="https://twitter.com/doohi" rel="me" aria-label="Doohi Collective Twitter link">
+      <SocialLink href="https://twitter.com/doohi" rel="me" aria-label="Doohi Twitter link">
         <Twitter size={16} />
       </SocialLink>
       <SocialLink
         href="#"
         rel="me"
-        aria-label="Doohi Collective Mastodon link"
+        aria-label="Doohi Mastodon link"
       >
         <Mastodon size={16} />
       </SocialLink>
-      <SocialLink href="#" aria-label="Doohi Collective Slack link">
+      <SocialLink href="#" aria-label="Doohi Slack link">
         <Slack size={16} />
       </SocialLink>
-      <SocialLink href="/contact" aria-label="Contact Doohi Collective">
+      <SocialLink href="/contact" aria-label="Contact Doohi">
         <Mail size={16} />
       </SocialLink>
     </div>
