@@ -81,7 +81,7 @@ const messages = defineMessages({
   'pricing.dashboard.description': {
     id: 'HostDashboard.description',
     defaultMessage:
-      'Easily manage budgets and expenses across all your Collectives, including automated credit card payments through Stripe and one-click payouts via Paypal and Wise.',
+      'Easily manage budgets and expenses across all your Collectives, including automated credit card payments through Stripe and one-click payouts via Paypal, Wise, Julaya or Paystack.',
   },
   'pricing.outsideFunds': {
     id: 'pricing.outsideFunds',
@@ -289,7 +289,7 @@ const ForFiscalHosts = () => {
             <FormattedMessage defaultMessage="Financial tracking and transparency means reporting writes itself" />
           </ListItem>
           <ListItem>
-            <FormattedMessage defaultMessage="Expense management and one-click payouts via Paypal and Wise" />
+            <FormattedMessage defaultMessage="Expense management and one-click payouts via Paypal, Wise, Julaya or Paystack" />
           </ListItem>
         </ListWrapper>
       </Flex>

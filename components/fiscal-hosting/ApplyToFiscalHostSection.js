@@ -42,7 +42,7 @@ const messages = defineMessages({
   'fiscalHosting.hosts.allForClimate': {
     id: 'fiscalHosting.hosts.allForClimate',
     defaultMessage:
-      'Dedicated to movements for climate and social justice.',
+      'Dedicated to movements for climate and social justice. Host to many related communities accros Africa.',
   },
   'fiscalHosting.hosts.OCE': {
     id: 'fiscalHosting.hosts.OCE',
