@@ -232,7 +232,7 @@ const ForFiscalHosts = () => {
             (1){' '}
             <FormattedMessage
               id="pricing.notes.paymentProcessor"
-              defaultMessage="Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, or <transferwiseLink></transferwiseLink>."
+              defaultMessage="Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, <julayaLink></julayaLink>, <paystackLink></paystackLink>, or <transferwiseLink></transferwiseLink>."
               values={{
                 stripeLink: getI18nLink({
                   href: 'https://stripe.com/pricing',
@@ -248,6 +248,16 @@ const ForFiscalHosts = () => {
                   href: 'https://wise.com/pricing',
                   openInNewTab: true,
                   children: 'Wise',
+                }),
+                julayaLink: getI18nLink({
+                  href: 'https://julaya.co/fr/prices',
+                  openInNewTab: true,
+                  children: 'Julaya',
+                }),
+                paystackLink: getI18nLink({
+                  href: 'https://paystack.com//pricing',
+                  openInNewTab: true,
+                  children: 'Paystack',
                 }),
               }}
             />

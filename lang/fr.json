@@ -2731,7 +2731,7 @@
   "pricing.grow.feeNote": "Seulement si vous facturez pour vos services",
   "pricing.hostFees": "{revshare} Commission de la plateforme sur vos revenus de frais d'Hôte",
   "pricing.noHostFees": "{fee} si vous ne facturez pas les frais d'Hôte à vos Collectifs",
-  "pricing.notes.paymentProcessor": "Des frais de traitement de paiement s'appliquent lorsque vous utilisez <stripeLink></stripeLink>, <paypalLink></paypalLink>, ou <transferwiseLink></transferwiseLink>.",
+  "pricing.notes.paymentProcessor": "Des frais de traitement de paiement s'appliquent lorsque vous utilisez <stripeLink></stripeLink>, <paypalLink></paypalLink>, <julayaLink></julayaLink>, ou <transferwiseLink></transferwiseLink>.",
   "pricing.outsideFunds": "Fonds extérieurs",
   "pricing.payoutFees": "{fee} Aucun frais sur les paiements sortants",
   "pricing.platformFees": "{fee} Aucun frais pour les paiements entrants",
