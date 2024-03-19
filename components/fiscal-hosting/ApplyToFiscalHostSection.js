@@ -32,7 +32,7 @@ const messages = defineMessages({
   'fiscalHosting.hosts.OSC': {
     id: 'fiscalHosting.hosts.OSC',
     defaultMessage:
-      'A US 501(c)(6) nonprofit entity serving as fiscal host to open source projects and related communities around the world.',
+      'A US 501(c)(6) nonprofit entity serving as fiscal host to open source projects and related communities in Africa.',
   },
   'fiscalHosting.hosts.socialchangenestcollective': {
     id: 'fiscalHosting.hosts.socialchangenestcollective',
@@ -51,7 +51,7 @@ const messages = defineMessages({
   },
   'fiscalHosting.hosts.OCN': {
     id: 'fiscalHosting.hosts.OCN',
-    defaultMessage: 'Offering kiwi impact projects fundholding options through a charity or a company structure.',
+    defaultMessage: 'Offering impact projects fundholding options through a charity or a company structure.',
   },
 });
 
