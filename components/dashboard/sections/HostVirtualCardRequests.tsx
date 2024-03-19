@@ -215,7 +215,7 @@ export default function HostVirtualCardRequests({ accountSlug: hostSlug }: Dashb
             defaultMessage="Manage virtual card requests made by your hosted collectives. <learnMoreLink>Learn more</learnMoreLink>"
             values={{
               learnMoreLink: getI18nLink({
-                href: 'https://docs.opencollective.com/help/fiscal-hosts/virtual-cards',
+                href: 'https://docs.doohi.com/help/fiscal-hosts/virtual-cards',
                 openInNewTabNoFollow: true,
               }),
             }}

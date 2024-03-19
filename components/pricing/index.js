@@ -214,7 +214,7 @@ const Pricing = () => {
                     values={{
                       ...I18nFormatters,
                       IndependentCollectiveLink: getI18nLink({
-                        href: 'https://docs.opencollective.com/help/independent-collectives',
+                        href: 'https://docs.doohi.com/help/independent-collectives',
                         openInNewTab: true,
                       }),
                       FiscalHostLink: getI18nLink({

@@ -244,7 +244,7 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
                     </NavItem>
                   </a>
                   
-                  <a href="https://docs.opencollective.com/help/about/introduction">
+                  <a href="https://docs.doohi.com/help/about/introduction">
                     <NavItem as={Container} mb={16}>
                       <FormattedMessage id="collective.about.title" defaultMessage="About" />
                     </NavItem>

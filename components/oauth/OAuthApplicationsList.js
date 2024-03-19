@@ -73,7 +73,7 @@ const OAuthApplicationsList = ({ account, onApplicationCreated, offset = 0 }) =>
           defaultMessage="For more information about OAuth applications, check <link>our documentation</link>."
           values={{
             link: getI18nLink({
-              href: 'https://docs.opencollective.com/help/developers/oauth',
+              href: 'https://docs.doohi.com/help/developers/oauth',
             }),
           }}
         />

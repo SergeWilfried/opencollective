@@ -108,7 +108,7 @@ const InvestingInTheCommons = () => {
                 lineBreak: <br />,
                 link: getI18nLink({
                   openInNewTab: true,
-                  href: 'https://docs.opencollective.com/help/about/investors',
+                  href: 'https://docs.doohi.com/help/about/investors',
                 }),
               }}
             />

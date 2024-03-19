@@ -465,7 +465,7 @@ class EditCollectiveForm extends React.Component {
               </Link>
 
               <StyledLink
-                href="https://docs.opencollective.com/help/financial-contributors/organizations/gift-cards#faq"
+                href="https://docs.doohi.com/help/financial-contributors/organizations/gift-cards#faq"
                 openInNewTab
               >
                 <InfoCircle size="1em" />

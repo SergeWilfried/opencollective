@@ -469,7 +469,7 @@ function Expense(props) {
               values={{
                 I18nSupportLink,
                 Link: getI18nLink({
-                  href: 'https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information',
+                  href: 'https://docs.doohi.com/help/expenses-and-getting-paid/tax-information',
                   openInNewTab: true,
                 }),
               }}

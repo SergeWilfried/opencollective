@@ -42,7 +42,7 @@ export const landingPageItems: Item[] = [
       },
       {
         label: <FormattedMessage id="collective.about.title" defaultMessage="About" />,
-        href: 'https://docs.opencollective.com/help/about/introduction',
+        href: 'https://docs.doohi.com/help/about/introduction',
       },
     ],
   },
@@ -138,7 +138,7 @@ export const regularFooterItems: Item[] = [
     items: [
       {
         label: <FormattedMessage id="collective.about.title" defaultMessage="About" />,
-        href: 'https://docs.opencollective.com/help/about/introduction',
+        href: 'https://docs.doohi.com/help/about/introduction',
       },
       {
         label: <FormattedMessage id="company.blog" defaultMessage="Blog" />,
@@ -148,7 +148,7 @@ export const regularFooterItems: Item[] = [
         label: <FormattedMessage id="company.hiring" defaultMessage="Hiring" />,
         href: '/hiring',
       },
-    
+
       {
         label: <FormattedMessage id="company.termsOfService" defaultMessage="Terms of service" />,
         href: '/tos',
@@ -159,7 +159,7 @@ export const regularFooterItems: Item[] = [
       },
       {
         label: <FormattedMessage id="company.securityPolicy" defaultMessage="Security Policy" />,
-        href: 'https://docs.opencollective.com/help/product/security',
+        href: 'https://docs.doohi.com/help/product/security',
       },
       {
         label: <FormattedMessage id="contactUs" defaultMessage="Contact us" />,

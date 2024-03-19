@@ -28,32 +28,32 @@ const topics = [
   {
     iconSrc: '/static/images/help-and-support/collectiveProfile-icon.png',
     id: 'collectiveProfiles',
-    link: 'https://docs.opencollective.com/help/collectives/collectives',
+    link: 'https://docs.doohi.com/help/collectives/collectives',
   },
   {
     iconSrc: '/static/images/help-and-support/fiscalHosts-icon.png',
     id: 'fiscalHosts',
-    link: 'https://docs.opencollective.com/help/fiscal-hosts/fiscal-hosts',
+    link: 'https://docs.doohi.com/help/fiscal-hosts/fiscal-hosts',
   },
   {
     iconSrc: '/static/images/help-and-support/contributions-icon.png',
     id: 'contributions',
-    link: 'https://docs.opencollective.com/help/financial-contributors/financial-contributors',
+    link: 'https://docs.doohi.com/help/financial-contributors/financial-contributors',
   },
   {
     iconSrc: '/static/images/help-and-support/expenses-icon.png',
     id: 'expenses',
-    link: 'https://docs.opencollective.com/help/expenses-and-getting-paid/expenses',
+    link: 'https://docs.doohi.com/help/expenses-and-getting-paid/expenses',
   },
   {
     iconSrc: '/static/images/help-and-support/projects-icon.png',
     id: 'projects',
-    link: 'https://docs.opencollective.com/help/collectives/projects',
+    link: 'https://docs.doohi.com/help/collectives/projects',
   },
   {
     iconSrc: '/static/images/help-and-support/security-icon.png',
     id: 'security',
-    link: 'https://docs.opencollective.com/help/product/security',
+    link: 'https://docs.doohi.com/help/product/security',
   },
 ];
 
@@ -101,7 +101,7 @@ const BrowseTopics = () => {
             </SectionTitle>
           </Box>
           <Box display={['none', 'inline-block']}>
-            <Link href="https://docs.opencollective.com" openInNewTab>
+            <Link href="https://docs.doohi.com" openInNewTab>
               <StyledButton minWidth={110} buttonStyle="marketing" whiteSpace="nowrap">
                 <FormattedMessage id="helpAndSupport.viewAll" defaultMessage="View All" />
               </StyledButton>

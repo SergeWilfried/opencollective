@@ -60,7 +60,7 @@ const GiftOFGiving = () => (
         </SectionDescription>
       </Box>
       <Box alignSelf={['center', null, 'flex-start']}>
-        <a href="https://docs.opencollective.com/help/financial-contributors/organizations/gift-cards">
+        <a href="https://docs.doohi.com/help/financial-contributors/organizations/gift-cards">
           <StyledButton whiteSpace="nowrap" letterSpacing="normal">
             <FormattedMessage defaultMessage="Learn More" />
           </StyledButton>

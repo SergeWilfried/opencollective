@@ -160,7 +160,7 @@ const GetToKnowUs = () => {
             >
               <StyledLink
                 color="black.800"
-                href="https://docs.opencollective.com"
+                href="https://docs.doohi.com"
                 textDecoration="underline"
                 openInNewTab
               >

@@ -150,7 +150,7 @@ class NewCreditCardFormWithoutStripe extends React.Component {
                     values={{
                       LearnMoreLink: getI18nLink({
                         openInNewTab: true,
-                        href: 'https://docs.opencollective.com/help/product/security#payments-security',
+                        href: 'https://docs.doohi.com/help/product/security#payments-security',
                       }),
                     }}
                   />

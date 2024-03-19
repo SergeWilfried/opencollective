@@ -85,19 +85,19 @@ const LineBreak = styled.br`
 const features = [
   {
     id: 'shareBudget',
-    learnMoreLink: 'https://docs.opencollective.com/help/collectives/budget',
+    learnMoreLink: 'https://docs.doohi.com/help/collectives/budget',
   },
   {
     id: 'receiveContributions',
-    learnMoreLink: 'https://docs.opencollective.com/help/financial-contributors/financial-contributors',
+    learnMoreLink: 'https://docs.doohi.com/help/financial-contributors/financial-contributors',
   },
   {
     id: 'manageExpenses',
-    learnMoreLink: 'https://docs.opencollective.com/help/expenses-and-getting-paid/expenses',
+    learnMoreLink: 'https://docs.doohi.com/help/expenses-and-getting-paid/expenses',
   },
   {
     id: 'engageCommunity',
-    learnMoreLink: 'https://docs.opencollective.com/help/collectives/conversations',
+    learnMoreLink: 'https://docs.doohi.com/help/collectives/conversations',
   },
   {
     id: 'celebrateSupporters',

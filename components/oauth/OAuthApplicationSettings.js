@@ -147,7 +147,7 @@ const OAuthApplicationSettings = ({ backPath, id }) => {
               },
               {
                 Link: getI18nLink({
-                  href: 'https://docs.opencollective.com/help/developers/oauth',
+                  href: 'https://docs.doohi.com/help/developers/oauth',
                   openInNewTab: true,
                 }),
               },

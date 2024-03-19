@@ -35,7 +35,7 @@ const ConnectedAccounts = props => {
           defaultMessage="See <Link>the documentation</Link> to learn more about Connected Accounts."
           values={{
             Link: getI18nLink({
-              href: 'https://docs.opencollective.com/help/fiscal-hosts/fiscal-host-settings/connected-accounts',
+              href: 'https://docs.doohi.com/help/fiscal-hosts/fiscal-host-settings/connected-accounts',
               openInNewTab: true,
             }),
           }}

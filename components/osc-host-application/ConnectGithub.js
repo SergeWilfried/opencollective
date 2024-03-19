@@ -95,7 +95,7 @@ class ConnectGithub extends React.Component {
                   values={{
                     helplink: (
                       <StyledLink
-                        href="https://docs.opencollective.com/help/collectives/osc-verification"
+                        href="https://docs.doohi.com/help/collectives/osc-verification"
                         openInNewTab
                         color="purple.500"
                       >

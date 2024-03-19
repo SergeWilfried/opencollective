@@ -54,7 +54,7 @@ const renderFormContent = formConfirmation => {
               </StyledButton>
             </Link>
             <StyledLink
-              href="https://docs.opencollective.com/"
+              href="https://docs.doohi.com/"
               buttonSize="medium"
               minWidth={208}
               buttonStyle="marketing"
