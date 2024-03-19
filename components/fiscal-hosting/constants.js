@@ -73,7 +73,7 @@ export const HOSTS = [
   },
   {
     id: 'socialchangenestcollective',
-    name: 'Social Change Nest',
+    name: 'Tékkré',
     location: '🇬🇧 United Kingdom',
     collectivePath: '/the-social-change-nest/apply',
     bgImage: 'socialchangenest',
@@ -81,7 +81,7 @@ export const HOSTS = [
   },
   {
     id: 'allForClimate',
-    name: 'All for climate',
+    name: 'Farafina',
     location: ' 🇪🇺 Europe',
     collectivePath: '/allforclimate/apply',
     bgImage: 'allforclimate-collective-bg',
