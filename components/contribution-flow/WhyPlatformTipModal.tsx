@@ -14,7 +14,7 @@ export function WhyPlatformTipModal(props: WhyPlatformTipModalProps) {
     <StyledModal width="490px" onClose={props.onClose}>
       <ModalHeader>
         <Flex alignItems="center" gap="12px" mr="20px">
-          <Image alt="Open Collective" src="/static/images/opencollective-icon.png" width={64} height={64} />
+          <Image alt="Doohi" src="/static/images/opencollective-icon.png" width={64} height={64} />
           <FormattedMessage defaultMessage="Help make the platform better for everyone." />
         </Flex>
       </ModalHeader>
