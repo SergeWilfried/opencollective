@@ -266,7 +266,7 @@ const RaiseMoney = () => {
                 >
                   <FormattedMessage
                     id="home.stat"
-                    defaultMessage={'Over 15,000 groups around the world raised and managed USD $35M last year'}
+                    defaultMessage={'Over 500 groups around the world raised and managed USD $2M last year'}
                   />
                 </P>
               </Box>

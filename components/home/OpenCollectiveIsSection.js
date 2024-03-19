@@ -81,7 +81,7 @@ const OpenCollectiveIs = () => {
             >
               <FormattedMessage
                 defaultMessage={
-                  'And a network of fiscal hosts that enable over 15,000 collectives around the world to spend and raise $35M a year.'
+                  'And a network of fiscal hosts that enable over 500 collectives in Africa to spend and raise'
                 }
               />
             </P>
