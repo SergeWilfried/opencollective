@@ -3922,6 +3922,7 @@ enum PayoutMethodType {
   BANK_ACCOUNT
   ACCOUNT_BALANCE
   CREDIT_CARD
+  MOBILE_MONEY
 }
 
 """
@@ -4215,6 +4216,8 @@ enum PaymentMethodService {
   PREPAID
   THEGIVINGBLOCK
   WISE
+  PAYSTACK
+  BIZAO
 }
 
 enum PaymentMethodLegacyType {
@@ -4265,6 +4268,8 @@ type ConnectedAccount {
 All supported services a user can connect with
 """
 enum ConnectedAccountService {
+  bizao
+  paystack
   paypal
   stripe
   stripe_customer
@@ -10949,6 +10954,8 @@ type TransferWise {
   balances: [Amount]
   amountBatched: Amount
 }
+
+
 
 """
 The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
@@ -18876,6 +18883,7 @@ type PaymentIntent {
   stripeAccount: String!
   stripeAccountPublishableSecret: String!
 }
+
 
 """
 Input to create a Stripe payment intent

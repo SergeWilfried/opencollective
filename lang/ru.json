@@ -3192,7 +3192,7 @@
   "TransactionsOverview": "Contributions and Expenses",
   "transferwise.error.balance.payment-option-unavailable": "Unable to fund transfer. Please check your balance and try again.",
   "transferwise.error.currencyNotSupported": "Эта валюта не поддерживается",
-  "transferwise.error.default": "Произошла неизвестная ошибка с Wise. Пожалуйста, свяжитесь с support@opencollective.com.",
+  "transferwise.error.default": "Произошла неизвестная ошибка с Wise. Пожалуйста, свяжитесь с assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Not enough funds in your {currency} balance. Please top up your account and try again.",
   "transferwise.error.notConnected": "Представитель не подключен к Wise",
   "tSQ2Fc": "Письмо со ссылкой для сброса пароля отправлено.",

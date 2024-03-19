@@ -43,23 +43,7 @@ slack community"
         </P>
       </StyledCard>
       <Box width="2px" height="64px" backgroundColor="#1869F5" mx="40px" display={['none', 'inline-block']} />
-      <StyledCard
-        as={Link}
-        href="https://github.com/opencollective"
-        borderWidth="0px"
-        boxShadow={['0px 1px 4px 1px rgba(49, 50, 51, 0.1)', 'unset']}
-        padding={['16px', 0]}
-        openInNewTab
-        textAlign="center"
-        width={['288px', '296px']}
-      >
-        <H3 fontSize="24px" lineHeight="32px" color="black.800" letterSpacing="-0.008em">
-          <FormattedMessage id="helpAndSupport.bugs" defaultMessage="Bugs & feature requests" />
-        </H3>
-        <P fontSize="16px" lineHeight="24px" color="black.700">
-          https://github.com/opencollective
-        </P>
-      </StyledCard>
+
     </Flex>
   </Flex>
 );

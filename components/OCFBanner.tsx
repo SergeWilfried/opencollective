@@ -18,6 +18,7 @@ import MessageBox from './MessageBox';
 import MessageBoxGraphqlError from './MessageBoxGraphqlError';
 import StyledLink from './StyledLink';
 
+
 const OCFPublicBannerMessage = ({ collective, newAccount, isSimplified }) => {
   if (newAccount) {
     return (

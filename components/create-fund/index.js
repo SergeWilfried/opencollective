@@ -59,14 +59,14 @@ class CreateFund extends Component {
       return {
         slug: 'europe',
         name: 'Open Collective Europe',
-        termsUrl: 'https://docs.opencollective.com/oceurope/getting-started/our-terms-and-conditions',
+        termsUrl: 'https://docs.doohi.com/oceurope/getting-started/our-terms-and-conditions',
       };
     }
     if (this.props.router.query.category === 'oce-foundation') {
       return {
         slug: 'oce-foundation',
         name: 'Open Collective Europe Foundation',
-        termsUrl: 'https://docs.opencollective.com/oceurope/getting-started/our-terms-and-conditions',
+        termsUrl: 'https://docs.doohi.com/oceurope/getting-started/our-terms-and-conditions',
       };
     }
   }

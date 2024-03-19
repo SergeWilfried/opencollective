@@ -23,7 +23,7 @@ const PlatformTip = ({ ...props }) => (
         defaultMessage="<strong>Platform Tips</strong><br></br>Open Collective is supported by voluntary contributions called Platform Tips, optionally added at checkout, which enable us to keep building the software without charging Collectives directly."
         values={{
           a: getI18nLink({
-            href: 'https://docs.opencollective.com/help/financial-contributors/financial-contributors',
+            href: 'https://docs.doohi.com/help/financial-contributors/financial-contributors',
             openInNewTab: true,
           }),
           strong: I18nBold,

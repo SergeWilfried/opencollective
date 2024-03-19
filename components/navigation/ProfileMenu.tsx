@@ -193,7 +193,7 @@ const ProfileMenu = ({ logoutParameters }: { logoutParameters?: Parameters<UserC
               <FormattedMessage defaultMessage="Help & Support" />
             </MenuItem>
 
-            <MenuItem Icon={BookOpen} href="https://docs.opencollective.com" external={true}>
+            <MenuItem Icon={BookOpen} href="https://docs.doohi.com" external={true}>
               <FormattedMessage id="menu.documentation" defaultMessage="Documentation" />
             </MenuItem>
 

@@ -207,8 +207,8 @@ const Security = ({ collective }) => {
               openInNewTab
               href={
                 data.account.isHost
-                  ? 'https://docs.opencollective.com/help/fiscal-hosts/payouts/two-factor-authentication-for-payouts'
-                  : 'https://docs.opencollective.com/help/product/two-factor-authentication'
+                  ? 'https://docs.doohi.com/help/fiscal-hosts/payouts/two-factor-authentication-for-payouts'
+                  : 'https://docs.doohi.com/help/product/two-factor-authentication'
               }
             >
               <span>

@@ -472,7 +472,7 @@ export default function EditVirtualCardModal({
                           link: getI18nLink({
                             as: Link,
                             openInNewTab: true,
-                            href: 'https://docs.opencollective.com/help/expenses-and-getting-paid/virtual-cards',
+                            href: 'https://docs.doohi.com/help/expenses-and-getting-paid/virtual-cards',
                           }),
                         }}
                       />

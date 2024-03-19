@@ -94,7 +94,7 @@ const Tiers = ({ collective, isLegacyOCFDuplicatedAccount }) => {
           </P>
           <P mt={3}>
             <StyledLink
-              href="https://docs.opencollective.com/help/collectives/collective-settings/tiers-goals"
+              href="https://docs.doohi.com/help/collectives/collective-settings/tiers-goals"
               openInNewTab
             >
               <FormattedMessage defaultMessage="Learn more about tiers" />.

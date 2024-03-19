@@ -111,7 +111,7 @@ const GetToKnowUs = () => {
             >
               <StyledLink
                 color="black.800"
-                href="https://blog.opencollective.com/tag/case-studies/"
+                href="https://blog.doohi.com/tag/case-studies/"
                 textDecoration="underline"
                 openInNewTab
               >
@@ -160,7 +160,7 @@ const GetToKnowUs = () => {
             >
               <StyledLink
                 color="black.800"
-                href="https://docs.opencollective.com"
+                href="https://docs.doohi.com"
                 textDecoration="underline"
                 openInNewTab
               >
@@ -248,21 +248,7 @@ const GetToKnowUs = () => {
               }
             />
           </P>
-          <Box display={['none', null, 'block']} mt="24px">
-            <Link href="/e2c">
-              <StyledButton
-                minWidth="135px"
-                my={['12px', null, 0]}
-                buttonStyle="marketing"
-                whiteSpace="nowrap"
-                backgroundColor="primary.900"
-                fontSize="16px"
-                lineHeight="20px"
-              >
-                <FormattedMessage defaultMessage="Learn more" />
-              </StyledButton>
-            </Link>
-          </Box>
+ 
         </Box>
       </Flex>
     </Flex>

@@ -3192,7 +3192,7 @@
   "TransactionsOverview": "Contributions and Expenses",
   "transferwise.error.balance.payment-option-unavailable": "Incapaz de financiar a transferência. Verifique seu saldo e tente novamente.",
   "transferwise.error.currencyNotSupported": "Esta moeda não é suportada",
-  "transferwise.error.default": "Um erro desconhecido aconteceu com a Wise. Entre em contato com support@opencollective.com.",
+  "transferwise.error.default": "Um erro desconhecido aconteceu com a Wise. Entre em contato com assistance@doohi.com.",
   "transferwise.error.insufficientFunds": "Não há fundos suficientes em seu {currency} saldo. Por favor, recarregue sua conta e tente novamente.",
   "transferwise.error.notConnected": "O host não está conectado ao Wise",
   "tSQ2Fc": "Your reset password email is on its way.",

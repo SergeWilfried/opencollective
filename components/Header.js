@@ -52,12 +52,12 @@ class Header extends React.Component {
       if (this.props.collective) {
         title = this.props.collective.name;
       } else {
-        title = `Open Collective - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
+        title = `Doohi Collective - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
       }
     }
 
-    if (!title.match(/open collective/i)) {
-      title = `${title} - Open Collective`;
+    if (!title.match(/Doohi Collective/i)) {
+      title = `${title} - Doohi Collective`;
     }
 
     return title;
@@ -75,11 +75,11 @@ class Header extends React.Component {
     const title = this.props.title || (collective && collective.name);
     const image = this.props.image || (collective && getCollectiveImage(collective));
     const description = this.props.description || collective?.description || collective?.longDescription;
-    const metaTitle = this.props.metaTitle || (title ? `${title} - Open Collective` : 'Open Collective');
+    const metaTitle = this.props.metaTitle || (title ? `${title} - Doohi Collective` : 'Doohi Collective');
     const defaultImage = `https://opencollective.com/static/images/opencollective-og.png`;
 
     const metas = [
-      { property: 'twitter:site', content: '@opencollect' },
+      { property: 'twitter:site', content: '@doohi' },
       { property: 'twitter:creator', content: this.getTwitterHandle() },
       { property: 'fb:app_id', content: '266835577107099' },
       { property: 'og:image', content: image || defaultImage },

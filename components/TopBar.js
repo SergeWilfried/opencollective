@@ -108,7 +108,6 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
     '/pricing',
     '/how-it-works',
     '/fiscal-hosting',
-    '/e2c',
     '/help',
   ];
   const onHomeRoute = homeRoutes.some(isRouteActive);
@@ -239,17 +238,13 @@ const TopBar = ({ showSearch, menuItems, showProfileAndChangelogMenu, account, n
                 popupMarginTop="-10px"
               >
                 <NavLinkContainer>
-                  <a href="https://blog.opencollective.com/">
+                  <a href="https://blog.doohi.com/">
                     <NavItem as={Container} mt={16} mb={16}>
                       <FormattedMessage id="company.blog" defaultMessage="Blog" />
                     </NavItem>
                   </a>
-                  <Link href="/e2c">
-                    <NavItem as={Container} mb={16}>
-                      <FormattedMessage id="OC.e2c" defaultMessage="Exit to Community" />
-                    </NavItem>
-                  </Link>
-                  <a href="https://docs.opencollective.com/help/about/introduction">
+                  
+                  <a href="https://docs.doohi.com/help/about/introduction">
                     <NavItem as={Container} mb={16}>
                       <FormattedMessage id="collective.about.title" defaultMessage="About" />
                     </NavItem>

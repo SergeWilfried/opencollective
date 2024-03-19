@@ -178,6 +178,11 @@ const EditAmountModal = (props: Omit<EditOrderModalProps, 'action'>) => {
   } = contributeOptionsState;
   const selectedTier = selectedContributeOption?.isCustom ? null : selectedContributeOption;
   const isPaypal = props.order.paymentMethod.service === PAYMENT_METHOD_SERVICE.PAYPAL;
+  const isBizao = props.order.paymentMethod.service === PAYMENT_METHOD_SERVICE.BIZAO;
+  const isPaystack = props.order.paymentMethod.service === PAYMENT_METHOD_SERVICE.PAYSTACK;
+
+  // TODO: Add Mobile Money Providers Support
+
   const tipAmount = props.order.platformTipAmount?.valueInCents || 0;
   const newAmount = selectedAmountOption?.label === OTHER_LABEL ? inputAmountValue : selectedAmountOption?.value;
   const newTotalAmount = newAmount + tipAmount; // For now tip can't be updated, we're just carrying it over

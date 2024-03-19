@@ -133,7 +133,7 @@ const PersonalTokenSettings = ({ backPath, id }) => {
               },
               {
                 Link: getI18nLink({
-                  href: 'https://docs.opencollective.com/help/developers/personal-tokens',
+                  href: 'https://docs.doohi.com/help/developers/personal-tokens',
                   openInNewTab: true,
                 }),
               },
@@ -207,7 +207,7 @@ const PersonalTokenSettings = ({ backPath, id }) => {
                     },
                     {
                       Link: getI18nLink({
-                        href: 'https://docs.opencollective.com/help/developers/oauth#text-available-scopes',
+                        href: 'https://docs.doohi.com/help/developers/oauth#text-available-scopes',
                         openInNewTab: true,
                       }),
                     },

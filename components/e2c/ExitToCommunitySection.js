@@ -23,14 +23,14 @@ const ExitToCommunity = () => {
       <Container display="flex" flexDirection="column" alignItems="center">
         <Box mt={[3, 0]} mb="24px" width={['288px', 1]}>
           <MainTitle textAlign="center">
-            <FormattedMessage id="e2c.title" defaultMessage="Exit to Community #E2C" />
+            <FormattedMessage id="e2c.title" defaultMessage="Empowering Communities" />
           </MainTitle>
         </Box>
         <Box width={['288px', '650px']}>
           <MainDescription fontSize="18px" lineHeight="26px" textAlign="center" fontWeight="500" color="black.800">
             <FormattedMessage
               id="e2c.description"
-              defaultMessage="Join us as we transition from a privately owned company to a structure that allows us to share power and revenue with you. "
+              defaultMessage="Join us in empowering communities by helping them find funding and partners. "
             />
           </MainDescription>
         </Box>

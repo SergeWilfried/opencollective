@@ -7,12 +7,15 @@ const messages = defineMessages({
     id: 'paymentMethodService.bank',
     defaultMessage: 'Bank Account',
   },
+ 
 });
 
 export const i18nPaymentMethodService = (service, intl) => {
   const PaymentMethodServiceI18n = {
     [PAYMENT_METHOD_SERVICE.PAYPAL]: 'PayPal',
     [PAYMENT_METHOD_SERVICE.WISE]: 'Wise',
+    [PAYMENT_METHOD_SERVICE.BIZAO]: 'Bizao',
+    [PAYMENT_METHOD_SERVICE.PAYSTACK]: 'Paystack',
     [PAYMENT_METHOD_SERVICE.BANK]: intl.formatMessage(messages[PAYMENT_METHOD_SERVICE.BANK]),
   };
 

@@ -40,7 +40,7 @@ const SafeTransactionMessage = () => {
               defaultMessage="Open Collective keeps your transaction safe. <link>Learn more</link>."
               values={{
                 link: getI18nLink({
-                  href: 'https://docs.opencollective.com/help/product/security#payments-security',
+                  href: 'https://docs.doohi.com/help/product/security#payments-security',
                   openInNewTab: true,
                 }),
               }}

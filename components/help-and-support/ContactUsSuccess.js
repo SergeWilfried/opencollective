@@ -71,22 +71,7 @@ const ContactUsSuccess = () => (
         </Wrapper>
       </StyledLink>
 
-      <StyledLink href="https://github.com/opencollective" openInNewTab>
-        <Wrapper color="black.900" className="linkWrapper" my={[3, null, 4]} width={['288px', '520px']}>
-          <Box width={['184px', 1]}>
-            <H3 fontSize="24px" textAlign="left" lineHeight="32px" letterSpacing="-0.008em" mb={2} color="black.800">
-              <FormattedMessage id="helpAndSupport.bugs" defaultMessage="Bugs & feature requests" />
-            </H3>
-            <P fontSize="15px" color="black.700" lineHeight="22px" textDecoration="underline">
-              https://github.com/opencollective
-            </P>
-          </Box>
-          <Box className="arrowWrapper" color="black.900" fontWeight="bold">
-            <ArrowRight2 size={'24'} />
-          </Box>
-        </Wrapper>
-      </StyledLink>
-
+ 
       <Wrapper color="black.900" width={['288px', '520px']} className="newsletterWrapper">
         <Container>
           <H3 fontSize="24px" textAlign="left" lineHeight="32px" letterSpacing="-0.008em" mb={2} color="black.800">

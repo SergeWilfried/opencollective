@@ -13,7 +13,7 @@ import StyledButton from '../StyledButton';
 import StyledLink from '../StyledLink';
 import { H1, H2, P } from '../Text';
 
-const TIERS_INFO_LINK = 'https://docs.opencollective.com/help/collectives/tiers-goals';
+const TIERS_INFO_LINK = 'https://docs.doohi.com/help/collectives/tiers-goals';
 
 const SmallExternalLink = styled(StyledLink)`
   font-size: 13px;

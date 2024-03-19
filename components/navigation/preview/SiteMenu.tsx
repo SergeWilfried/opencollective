@@ -60,7 +60,7 @@ export default function SiteMenu() {
                   <LifeBuoy size={16} /> <FormattedMessage defaultMessage="Help & Support" />
                 </Flex>
               </DrawerMenuItem>
-              <DrawerMenuItem href="https://docs.opencollective.com" onClick={onClose} openInNewTab>
+              <DrawerMenuItem href="https://docs.doohi.com" onClick={onClose} openInNewTab>
                 <Flex alignItems="center" gridGap={2}>
                   <BookOpen size={16} /> <FormattedMessage id="menu.documentation" defaultMessage="Documentation" />
                 </Flex>

@@ -325,7 +325,7 @@ const FiscalHost = () => {
                 </P>
               </Box>
             </Container>
-            <StyledLink openInNewTab href="https://docs.opencollective.com/help/fiscal-hosts/become-a-fiscal-host">
+            <StyledLink openInNewTab href="https://docs.doohi.com/help/fiscal-hosts/become-a-fiscal-host">
               <StyledButton
                 my={2}
                 ml={[null, 3]}
