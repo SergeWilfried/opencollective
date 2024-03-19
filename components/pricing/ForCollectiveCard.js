@@ -192,7 +192,7 @@ const ForCollectiveCard = () => {
             (1){' '}
             <FormattedMessage
               id="pricing.notes.paymentProcessor"
-              defaultMessage="Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, or <transferwiseLink></transferwiseLink>."
+              defaultMessage="Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, <julayaLink></julayaLink>, <paystackLink></paystackLink>, or <transferwiseLink></transferwiseLink>."
               values={{
                 stripeLink: getI18nLink({
                   href: 'https://stripe.com/pricing',
@@ -203,6 +203,16 @@ const ForCollectiveCard = () => {
                   href: 'https://paypal.com/pricing',
                   openInNewTab: true,
                   children: 'PayPal',
+                }),
+                julayaLink: getI18nLink({
+                  href: 'https://julaya.co/fr/prices',
+                  openInNewTab: true,
+                  children: 'Julaya',
+                }),
+                paystackLink: getI18nLink({
+                  href: 'https://paystack.com//pricing',
+                  openInNewTab: true,
+                  children: 'Paystack',
                 }),
                 transferwiseLink: getI18nLink({
                   href: 'https://wise.com/pricing',

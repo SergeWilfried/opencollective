@@ -2731,7 +2731,7 @@
   "pricing.grow.feeNote": "Nur wenn du für deine Dienste Gebühren erhebst",
   "pricing.hostFees": "{revshare} Anteil der Plattform an deinen Einnahmen aus den Host-Gebühren",
   "pricing.noHostFees": "{fee} wenn du deinen Kollektiven keine Host-Gebühren berechnest",
-  "pricing.notes.paymentProcessor": "Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, or <transferwiseLink></transferwiseLink>.",
+  "pricing.notes.paymentProcessor": "Payment processor fees apply when using <stripeLink></stripeLink>, <paypalLink></paypalLink>, <julayaLink></julayaLink>, <paystackLink></paystackLink>, or <transferwiseLink></transferwiseLink>.",
   "pricing.outsideFunds": "Outside funds",
   "pricing.payoutFees": "{fee} No fees on outgoing payments",
   "pricing.platformFees": "{fee} No fees on incoming payments",
