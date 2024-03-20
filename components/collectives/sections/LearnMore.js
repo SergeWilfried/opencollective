@@ -75,12 +75,6 @@ const learningChannels = [
     desktopItemOrder: 1,
   },
   {
-    id: 'openSourceCode',
-    name: 'Open Source code',
-    link: 'https://github.com/opencollective/opencollective',
-    desktopItemOrder: 4,
-  },
-  {
     id: 'blog',
     name: 'Blog',
     link: 'https://blog.opencollective.com',
