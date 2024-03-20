@@ -74,7 +74,6 @@ const learningChannels = [
     link: 'https://docs.doohi.com',
     desktopItemOrder: 1,
   },
-
   {
     id: 'blog',
     name: 'Blog',
