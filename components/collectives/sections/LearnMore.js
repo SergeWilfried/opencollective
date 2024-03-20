@@ -80,7 +80,19 @@ const learningChannels = [
     name: 'Blog',
     link: 'https://blog.opencollective.com',
     desktopItemOrder: 3,
-  }
+  },
+  {
+    id: 'openFinances',
+    name: 'Open Finances',
+    link: 'https://opencollective.com/opencollective',
+    desktopItemOrder: 5,
+  },
+  {
+    id: 'openCompany',
+    name: 'Open Company',
+    link: 'https://opencollective.com/opencollective',
+    desktopItemOrder: 6,
+  },
 ];
 
 const messages = defineMessages({
