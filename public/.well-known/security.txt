@@ -1,0 +1,4 @@
+Contact: security@doohi.org
+Preferred-Languages: en
+Canonical: https://doohi.org/.well-known/security.txt
+Policy: https://github.com/opencollective/opencollective/blob/main/SECURITY.md

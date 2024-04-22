@@ -1,0 +1,183 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+env:
+  TZ: UTC
+  OC_ENV: ci
+  NODE_ENV: test
+  WEBSITE_URL: http://localhost:3000
+  API_URL: http://localhost:3060
+  PDF_SERVICE_URL: http://localhost:3002
+  API_KEY: dvl-1510egmf4a23d80342403fb599qd
+  CI: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run lint:quiet
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run prettier:check
+
+  depcheck:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run depcheck
+
+  find-unused-exports:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run find-unused-exports
+
+  check-langs:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run langs:check
+
+  build:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - name: Restore NextJS build cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          # Generate a new cache whenever packages or source files change
+          key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache
+          restore-keys: |
+            ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+            ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-nextjs-
+
+      - name: Build
+        run: PRESERVE_NEXT_CACHE=true npm run build
+
+  test:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run test:jest
+
+  typescript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run type:check
+
+  build-components:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+        with:
+          CACHE_VERSION: ${{ secrets.CACHE_VERSION }}
+
+      - run: npm run build:components
+
+  e2e:
+    if: github.ref_name != 'i18n/crowdin'
+    needs: build
+    uses: ./.github/workflows/e2e.yml
+    secrets: inherit

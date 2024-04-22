@@ -1,0 +1,14 @@
+*
+!components
+!lang
+!lib
+!pages
+!scripts
+!server
+!static
+!.babelrc
+!env.js
+!next.config.js
+!package.json
+!package-lock.json
+**/__tests__/*
