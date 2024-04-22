@@ -288,7 +288,7 @@ function SocialLinkItem({ value, error, onChange, onRemoveItem }: SocialLinkItem
           value={value.url}
           onBlur={onUrlBlur}
           onChange={onUrlChange}
-          placeholder="https://opencollective.com/"
+          placeholder="https://doohi.org/"
         />
       </Flex>
 
