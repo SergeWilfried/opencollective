@@ -47,7 +47,7 @@ class ButtonPage extends React.Component {
     const { color = 'white', collectiveSlug, verb = 'donate' } = this.props;
 
     return (
-      <a target="_blank" rel="noopener noreferrer" href={`https://opencollective.com/${collectiveSlug}/${verb}`}>
+      <a target="_blank" rel="noopener noreferrer" href={`https://doohi.org/${collectiveSlug}/${verb}`}>
         <CollectButton color={color} verb={verb} />
       </a>
     );

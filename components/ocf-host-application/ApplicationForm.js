@@ -396,7 +396,7 @@ const ApplicationForm = ({
                             >
                               {({ field }) => (
                                 <StyledInputGroup
-                                  prepend="opencollective.com/"
+                                  prepend="doohi.org/"
                                   type="text"
                                   placeholder="agora"
                                   {...field}

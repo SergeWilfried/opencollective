@@ -3,8 +3,8 @@ const { pipeline } = require('stream');
 const { promisify } = require('util');
 const streamPipeline = promisify(pipeline);
 
-/* Helper to enable downloading files that are on S3 since Chrome and Firefox does 
-   not allow cross-origin downloads when using the download attribute on an anchor tag, 
+/* Helper to enable downloading files that are on S3 since Chrome and Firefox does
+   not allow cross-origin downloads when using the download attribute on an anchor tag,
    see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-download. */
 async function downloadFileHandler(req, res) {
   const { url } = req.query;
@@ -13,20 +13,20 @@ async function downloadFileHandler(req, res) {
   }
 
   const hostname = req.get('original-hostname') || req.hostname;
-  const isProd = hostname === 'opencollective.com';
+  const isProd = hostname === 'doohi.org';
 
   const S3Url = new RegExp(
-    `^https:\\/\\/opencollective-${isProd ? 'production' : 'staging'}\\.s3[.-]us-west-1\\.amazonaws\\.com`,
+    `^https:\\/\\/doohi-${isProd ? 'production' : 'staging'}\\.s3[.-]us-west-1\\.amazonaws\\.com`,
   );
 
   const RestApiCsvTransactionsUrl = new RegExp(
-    `^https:\\/\\/rest${isProd ? '' : '-staging'}\\.opencollective\\.com\\/v2\\/[^/]+\\/transactions\\.csv`,
+    `^https:\\/\\/rest${isProd ? '' : '-staging'}\\.doohi\\.org\\/v2\\/[^/]+\\/transactions\\.csv`,
   );
 
   if (!S3Url.test(url) && !RestApiCsvTransactionsUrl.test(url)) {
     return res.status(400).json({
       error:
-        'Only files from Open Collective S3 buckets and specific REST API are allowed - to the correct environment',
+        'Only files from Doohi S3 buckets and specific REST API are allowed - to the correct environment',
     });
   }
 
