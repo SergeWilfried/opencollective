@@ -73,6 +73,7 @@ const getCustomAgent = () => {
   }
   return customAgent;
 };
+postgres://postgres:f1d1AfcDFGBfCDCBf5ED346BCcC6G2bf@viaduct.proxy.rlwy.net:26796/railway
 
 const serverSideFetch = async (url, options: { headers?: any; agent?: any; body?: string } = {}) => {
   if (typeof window === 'undefined') {

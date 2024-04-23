@@ -13,7 +13,7 @@ module.exports = defineConfig({
   video: true,
   chromeWebSecurity: false,
   scrollBehavior: 'center',
-  blockHosts: ['wtfismyip.com', 'images.opencollective.com', 'images-staging.opencollective.com', 'localhost:3001'],
+  blockHosts: ['wtfismyip.com', 'images.doohi.org', 'images-staging.doohi.org', 'localhost:3001'],
   env: {
     MAILDEV_URL: 'http://localhost:1080',
     codeCoverage: {
