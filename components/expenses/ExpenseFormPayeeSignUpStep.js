@@ -229,7 +229,7 @@ const ExpenseFormPayeeSignUpStep = ({ formik, collective, onCancel, onNext }) =>
                   name={field.name}
                   label={formatMessage(msg.orgSlugLabel)}
                 >
-                  {inputProps => <StyledInputGroup {...inputProps} {...field} prepend="opencollective.com/" />}
+                  {inputProps => <StyledInputGroup {...inputProps} {...field} prepend="doohi.org/" />}
                 </StyledInputField>
               )}
             </Field>

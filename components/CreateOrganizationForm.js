@@ -254,7 +254,7 @@ const CreateOrganizationForm = props => {
                             }}
                             as={StyledInputGroup}
                             {...inputProps}
-                            prepend="opencollective.com/"
+                            prepend="doohi.org/"
                             placeholder={intl.formatMessage(placeholders.slug)}
                           />
                         )}
