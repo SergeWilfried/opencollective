@@ -22,7 +22,7 @@ want to talk!"
     <Flex flexDirection={['column', 'row']} alignItems="center">
       <StyledCard
         as={StyledLink}
-        href="https://slack.opencollective.com/"
+        href="https://slack.doohi.org/"
         borderWidth="0px"
         boxShadow={['0px 1px 4px 1px rgba(49, 50, 51, 0.1)', 'unset']}
         padding={['16px', 0]}
@@ -39,7 +39,7 @@ slack community"
           />
         </H3>
         <P fontSize="16px" lineHeight="24px" color="black.700">
-          https://slack.opencollective.com/
+          https://slack.doohi.org/
         </P>
       </StyledCard>
       <Box width="2px" height="64px" backgroundColor="#1869F5" mx="40px" display={['none', 'inline-block']} />

@@ -111,7 +111,7 @@ const Tiers = ({ collective, isLegacyOCFDuplicatedAccount }) => {
             <div>
               <p>You can’t make any changes to the tiers since this is a limited account.</p>
               <p>
-                <StyledLink href="https://blog.opencollective.com/fiscal-host-transition/" openInNewTab>
+                <StyledLink href="https://blog.doohi.org/fiscal-host-transition/" openInNewTab>
                   Learn more
                 </StyledLink>
               </p>

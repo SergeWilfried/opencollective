@@ -78,7 +78,7 @@ const GetToKnowUs = () => {
             <StyledListItem fontSize="20px" lineHeight="28px" letterSpacing="-0.008em" fontWeight="500" mb="24px">
               <StyledLink
                 color="black.800"
-                href="https://blog.opencollective.com"
+                href="https://blog.doohi.org"
                 openInNewTab
                 textDecoration="underline"
               >
@@ -177,7 +177,7 @@ const GetToKnowUs = () => {
             >
               <StyledLink
                 color="black.800"
-                href="https://slack.opencollective.com/"
+                href="https://slack.doohi.org/"
                 textDecoration="underline"
                 openInNewTab
               >

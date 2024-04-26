@@ -675,7 +675,7 @@ class EditCollectiveForm extends React.Component {
         },
         {
           name: 'slug',
-          pre: 'https://opencollective.com/',
+          pre: 'https://doohi.org/',
           placeholder: '',
           maxLength: 255,
           when: () => collective.type !== EVENT,

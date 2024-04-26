@@ -481,7 +481,7 @@ class SearchPage extends React.Component {
                             values={{
                               Link: getI18nLink({
                                 openInNewTab: true,
-                                href: 'https://opencollective.com/help',
+                                href: 'https://doohi.org/help',
                               }),
                             }}
                           />
@@ -496,7 +496,7 @@ class SearchPage extends React.Component {
                         SupportLink: I18nSupportLink,
                         SlackLink: getI18nLink({
                           openInNewTab: true,
-                          href: 'https://slack.opencollective.com/',
+                          href: 'https://slack.doohi.org/',
                         }),
                       }}
                     />
@@ -529,7 +529,7 @@ class SearchPage extends React.Component {
                     defaultMessage="Can't find what you're looking for? Check our <Link>Docs & Help!</Link>"
                     values={{
                       Link: getI18nLink({
-                        href: 'https://opencollective.com/help',
+                        href: 'https://doohi.org/help',
                         openInNewTab: true,
                       }),
                     }}

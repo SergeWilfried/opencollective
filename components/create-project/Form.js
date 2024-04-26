@@ -183,7 +183,7 @@ class CreateProjectForm extends React.Component {
                           }}
                           as={StyledInputGroup}
                           {...inputProps}
-                          prepend={`opencollective.com/${parent.slug}/projects/`}
+                          prepend={`doohi.org/${parent.slug}/projects/`}
                           placeholder={placeholders.slug}
                         />
                       )}

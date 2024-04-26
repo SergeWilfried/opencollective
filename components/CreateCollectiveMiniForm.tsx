@@ -447,7 +447,7 @@ const CreateCollectiveMiniForm = ({
                     <Field
                       as={StyledInput}
                       {...inputProps}
-                      placeholder="e.g., opencollective.com"
+                      placeholder="e.g., doohi.org"
                       width="100%"
                       data-cy="mini-form-website-field"
                     />

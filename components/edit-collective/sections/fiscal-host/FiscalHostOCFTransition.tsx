@@ -137,7 +137,7 @@ export const FiscalHostOCFTransition = ({ collective }) => {
                   March. On this date all of your active recurring contributions will be paused. Once you have
                   successfully found a new Fiscal Host we will notify your contributors and invite them to renew their
                   contributions. You can learn more about this{' '}
-                  <StyledLink href="https://blog.opencollective.com/fiscal-host-transition/" openInNewTab>
+                  <StyledLink href="https://blog.doohi.org/fiscal-host-transition/" openInNewTab>
                     here
                   </StyledLink>
                   .

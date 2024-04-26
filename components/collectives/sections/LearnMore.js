@@ -65,7 +65,7 @@ const learningChannels = [
   {
     id: 'slack',
     name: 'Slack',
-    link: 'https://slack.opencollective.com',
+    link: 'https://slack.doohi.org',
     desktopItemOrder: 2,
   },
   {
@@ -77,7 +77,7 @@ const learningChannels = [
   {
     id: 'blog',
     name: 'Blog',
-    link: 'https://blog.opencollective.com',
+    link: 'https://blog.doohi.org',
     desktopItemOrder: 3,
   },
   {

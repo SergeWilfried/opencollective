@@ -221,7 +221,7 @@ const getNotification = (intl, status, collective, host, LoggedInUser, refetch) 
       description: (
         <React.Fragment>
           Find more information here:{' '}
-          <Link href="https://blog.opencollective.com/open-collective-official-statement-ocf-dissolution/" openInNewTab>
+          <Link href="https://blog.doohi.org/open-collective-official-statement-ocf-dissolution/" openInNewTab>
             Open Collective official Statement
           </Link>
           .
