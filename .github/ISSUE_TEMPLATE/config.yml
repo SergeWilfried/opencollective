@@ -4,7 +4,7 @@ contact_links:
     url: https://github.com/opencollective/opencollective/issues
     about: Repository to track issues across all our projects
   - name: Slack Channel
-    url: http://slack.opencollective.com/
+    url: http://slack.doohi.org/
     about: Engage with the Open Collective community
   - name: Documentation
     url: https://docs.doohi.com/help/

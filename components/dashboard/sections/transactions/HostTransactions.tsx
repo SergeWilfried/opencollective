@@ -5,7 +5,6 @@ import { defineMessage, FormattedMessage, useIntl } from 'react-intl';
 import { z } from 'zod';
 
 import { FilterComponentConfigs, FiltersToVariables } from '../../../../lib/filters/filter-types';
-import { boolean } from '../../../../lib/filters/schemas';
 import { API_V2_CONTEXT } from '../../../../lib/graphql/helpers';
 import { TransactionsTableQueryVariables } from '../../../../lib/graphql/types/v2/graphql';
 import useQueryFilter from '../../../../lib/hooks/useQueryFilter';
@@ -22,6 +21,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../../../ui/Tooltip';
 import DashboardHeader from '../../DashboardHeader';
 import { EmptyResults } from '../../EmptyResults';
 import ExportTransactionsCSVModal from '../../ExportTransactionsCSVModal';
+import { accountingCategoryFilter } from '../../filters/AccountingCategoryFilter';
 import { Filterbar } from '../../filters/Filterbar';
 import { hostedAccountFilter } from '../../filters/HostedAccountFilter';
 import { DashboardSectionProps } from '../../types';
@@ -36,12 +36,13 @@ import { transactionsTableQuery } from './queries';
 import { TransactionDrawer } from './TransactionDrawer';
 import TransactionsTable from './TransactionsTable';
 
-const schema = commonSchema.extend({
+export const schema = commonSchema.extend({
   account: hostedAccountFilter.schema,
-  excludeHost: boolean.default(false),
+  excludeAccount: z.string().optional(),
+  accountingCategory: accountingCategoryFilter.schema,
 });
 
-type FilterValues = z.infer<typeof schema>;
+export type FilterValues = z.infer<typeof schema>;
 
 type FilterMeta = CommonFilterMeta & {
   hostSlug: string;
@@ -49,19 +50,21 @@ type FilterMeta = CommonFilterMeta & {
 
 // Only needed when values and key of filters are different
 // to expected key and value of QueryVariables
-const toVariables: FiltersToVariables<FilterValues, TransactionsTableQueryVariables, FilterMeta> = {
+export const toVariables: FiltersToVariables<FilterValues, TransactionsTableQueryVariables, FilterMeta> = {
   ...commonToVariables,
   account: hostedAccountFilter.toVariables,
-  excludeHost: excludeHost => ({ includeHost: !excludeHost }),
+  excludeAccount: value => ({ excludeAccount: { slug: value } }),
 };
 
 // The filters config is used to populate the Filters component.
 const filters: FilterComponentConfigs<FilterValues, FilterMeta> = {
   ...commonFilters,
-  excludeHost: {
-    labelMsg: defineMessage({ defaultMessage: 'Exclude host account' }),
-  },
   account: hostedAccountFilter.filter,
+  excludeAccount: {
+    ...hostedAccountFilter.filter,
+    labelMsg: defineMessage({ defaultMessage: 'Exclude account', id: 'NBPN5y' }),
+  },
+  accountingCategory: accountingCategoryFilter.filter,
 };
 
 const hostTransactionsMetaDataQuery = gql`
@@ -77,6 +80,14 @@ const hostTransactionsMetaDataQuery = gql`
       slug
       currency
       settings
+      accountingCategories {
+        nodes {
+          id
+          code
+          name
+          kind
+        }
+      }
     }
   }
 `;
@@ -101,19 +112,19 @@ const HostTransactions = ({ accountSlug: hostSlug }: DashboardSectionProps) => {
 
   const views = [
     {
-      label: intl.formatMessage({ defaultMessage: 'All' }),
+      label: intl.formatMessage({ defaultMessage: 'All', id: 'zQvVDJ' }),
       filter: {},
       id: 'all',
     },
     {
       label: intl.formatMessage({ id: 'HostedCollectives', defaultMessage: 'Hosted Collectives' }),
-      filter: { excludeHost: true },
+      filter: { excludeAccount: hostSlug },
       id: 'hosted_collectives',
     },
     {
-      label: metaData?.host?.name,
+      label: intl.formatMessage({ defaultMessage: 'Fiscal Host', id: 'Fiscalhost' }),
       filter: { account: hostSlug },
-      id: 'self',
+      id: 'fiscal_host',
     },
   ];
   const queryFilter = useQueryFilter({
@@ -122,9 +133,9 @@ const HostTransactions = ({ accountSlug: hostSlug }: DashboardSectionProps) => {
     filters,
     meta: {
       currency: metaData?.host?.currency,
-      paymentMethodTypes: metaData?.transactions?.paymentMethodTypes,
       kinds: metaData?.transactions?.kinds,
       hostSlug: hostSlug,
+      paymentMethodTypes: metaData?.transactions?.paymentMethodTypes,
     },
     views,
   });
@@ -181,8 +192,9 @@ const HostTransactions = ({ accountSlug: hostSlug }: DashboardSectionProps) => {
             nbPlaceholders={20}
             onClickRow={row => {
               setTransactionInDrawer(row);
-              queryFilter.setFilter('openTransactionId', row.id);
+              queryFilter.setFilter('openTransactionId', row.id, false);
             }}
+            queryFilter={queryFilter}
             useAltTestLayout={layout === TestLayout.DEBITCREDIT}
           />
           <Flex mt={5} justifyContent="center">
@@ -203,7 +215,7 @@ const HostTransactions = ({ accountSlug: hostSlug }: DashboardSectionProps) => {
         resetFilters={queryFilter.resetFilters}
         setOpen={open => {
           if (!open) {
-            queryFilter.setFilter('openTransactionId', undefined);
+            queryFilter.setFilter('openTransactionId', undefined, false);
           }
         }}
         transactionId={queryFilter.values.openTransactionId}

@@ -85,7 +85,7 @@ const Divider = styled.div<DividerProps>`
     `}
 `;
 
-export const CloseIcon = styled(X)`
+const CloseIcon = styled(X)`
   height: 20px;
   width: 20px;
   color: #76777a;
@@ -191,7 +191,12 @@ const StyledModal = ({
     }
     if (
       hasUnsavedChanges &&
-      !confirm(intl.formatMessage({ defaultMessage: 'You have unsaved changes. Are you sure you want to close this?' }))
+      !confirm(
+        intl.formatMessage({
+          defaultMessage: 'You have unsaved changes. Are you sure you want to close this?',
+          id: 'srNsR3',
+        }),
+      )
     ) {
       return;
     }

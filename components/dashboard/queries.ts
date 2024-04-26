@@ -23,6 +23,16 @@ export const adminPanelQuery = gql`
       pendingExpenses: expenses(status: PENDING, direction: RECEIVED, includeChildrenExpenses: true, limit: 0) {
         totalCount
       }
+      pausedIncomingContributions: orders(filter: INCOMING, status: PAUSED, includeIncognito: true) {
+        totalCount
+      }
+      pausedOutgoingContributions: orders(filter: OUTGOING, status: PAUSED, includeIncognito: true) {
+        totalCount
+      }
+      ... on AccountWithContributions {
+        canStartResumeContributionsProcess
+        hasResumeContributionsProcessStarted
+      }
       childrenAccounts {
         totalCount
         nodes {
@@ -43,6 +53,12 @@ export const adminPanelQuery = gql`
         id
         REQUIRE_2FA_FOR_ADMINS
       }
+      ... on Organization {
+        host {
+          id
+          requiredLegalDocuments
+        }
+      }
       ... on AccountWithParent {
         parent {
           id
@@ -55,8 +71,10 @@ export const adminPanelQuery = gql`
       }
       ... on AccountWithHost {
         hostFeePercent
+        isApproved
         host {
           id
+          requiredLegalDocuments
           legacyId
           slug
           name
@@ -76,9 +94,6 @@ export const adminPanelQuery = gql`
             }
           }
         }
-      }
-      ... on AccountWithHost {
-        isApproved
       }
     }
   }

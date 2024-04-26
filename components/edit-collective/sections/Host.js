@@ -116,7 +116,7 @@ class Host extends React.Component {
   }
 
   render() {
-    const { LoggedInUser, collective, router, intl } = this.props;
+    const { LoggedInUser, collective, router, intl, additionalInfo } = this.props;
     const { showModal, action } = this.state;
     const { locale } = intl;
 
@@ -213,7 +213,7 @@ class Host extends React.Component {
           ) : (
             <div>
               <h2 className="mb-2 mt-8 text-base font-bold">
-                <FormattedMessage defaultMessage="Current fiscal host" />
+                <FormattedMessage defaultMessage="Current fiscal host" id="HPViRL" />
               </h2>
               <div className="flex justify-between gap-4 rounded-lg border border-gray-300 p-4">
                 {/** Host info */}
@@ -232,8 +232,8 @@ class Host extends React.Component {
                           defaultMessage="{item}:"
                           values={{ item: <FormattedMessage id="HostedSince" defaultMessage="Hosted since" /> }}
                         />{' '}
-                        {this.props.additionalInfo?.account?.approvedAt ? (
-                          <FormattedDate dateStyle="medium" value={this.props.additionalInfo?.account?.approvedAt} />
+                        {additionalInfo?.account?.approvedAt ? (
+                          <FormattedDate dateStyle="medium" value={additionalInfo?.account?.approvedAt} />
                         ) : (
                           <span>-</span>
                         )}
@@ -242,6 +242,7 @@ class Host extends React.Component {
                       <span>
                         <FormattedMessage
                           defaultMessage="Host currency: {currency}"
+                          id="fPQ9XL"
                           values={{ currency: collective.host.currency }}
                         />
                       </span>
@@ -249,14 +250,31 @@ class Host extends React.Component {
                   </div>
                 </div>
                 {/** Collective balance */}
-                <div>
-                  <FormattedMoneyAmount
-                    amount={collective.stats.balance}
-                    currency={collective.currency}
-                    amountStyles={{ fontSize: '20px', fontWeight: 'bold' }}
-                    precision={2}
-                  />
-                </div>
+                {additionalInfo?.account?.stats?.consolidatedBalance?.valueInCents > 0 && (
+                  <div className="text-right">
+                    <FormattedMoneyAmount
+                      amount={additionalInfo.account.stats.consolidatedBalance.valueInCents}
+                      currency={additionalInfo.account.stats.consolidatedBalance.currency}
+                      amountStyles={{ fontSize: '20px', fontWeight: 'bold' }}
+                      precision={2}
+                    />
+                    {(additionalInfo.account.events.totalCount > 0 || additionalInfo.account.projects > 0) && (
+                      <p className="text-sm">
+                        <FormattedMessage
+                          defaultMessage="Including {eventsCount, plural, zero {} one {one event} other {# events}}{both, select, true { and } other {}}{projectsCount, plural, zero {} one {one project} other {# projects}}"
+                          id="WR7z/n"
+                          values={{
+                            eventsCount: additionalInfo.account.events.totalCount,
+                            projectsCount: additionalInfo.account.projects.totalCount,
+                            both:
+                              additionalInfo.account.events.totalCount > 0 &&
+                              additionalInfo.account.projects.totalCount > 0,
+                          }}
+                        />
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
               {collective.host.id === OPENCOLLECTIVE_FOUNDATION_ID && !collective.parentCollective ? (
                 <div className="mt-8">
@@ -356,7 +374,7 @@ class Host extends React.Component {
                     <Button
                       variant="destructive"
                       loading={this.state.isSubmitting}
-                      onClick={() => this.changeHost(null)}
+                      onClick={() => this.changeHost()}
                       data-cy="continue"
                     >
                       <FormattedMessage
@@ -398,7 +416,7 @@ class Host extends React.Component {
             </Box>
             <Box mb={4}>
               <OptionLabel htmlFor="host-radio-noHost">
-                <FormattedMessage defaultMessage="No one" />
+                <FormattedMessage defaultMessage="No one" id="tcxpLX" />
               </OptionLabel>
               <FormattedMessage
                 id="collective.edit.host.noHost.description"
@@ -533,7 +551,7 @@ class Host extends React.Component {
                       fontSize="13px"
                       href={`${collective.slug}/accept-financial-contributions/host`}
                     >
-                      <FormattedMessage defaultMessage="Choose a Fiscal Host" />
+                      <FormattedMessage defaultMessage="Choose a Fiscal Host" id="j4X/+l" />
                     </StyledLink>
                   </Container>
                 </div>
@@ -552,6 +570,18 @@ const withAdditionalInfo = graphql(
       account(slug: $slug) {
         id
         legacyId
+        events: childrenAccounts(accountType: EVENT) {
+          totalCount
+        }
+        projects: childrenAccounts(accountType: PROJECT) {
+          totalCount
+        }
+        stats {
+          consolidatedBalance: balance(includeChildren: true) {
+            valueInCents
+            currency
+          }
+        }
         ... on AccountWithHost {
           approvedAt
         }

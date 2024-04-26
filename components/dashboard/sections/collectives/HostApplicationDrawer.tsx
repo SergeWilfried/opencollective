@@ -22,7 +22,6 @@ import { Drawer, DrawerActions, DrawerHeader } from '../../../Drawer';
 import { Flex } from '../../../Grid';
 import Link from '../../../Link';
 import LinkCollective from '../../../LinkCollective';
-import { APPLICATION_DATA_AMOUNT_FIELDS } from '../../../ocf-host-application/ApplicationForm';
 import StyledLink from '../../../StyledLink';
 import StyledRoundButton from '../../../StyledRoundButton';
 import StyledTag from '../../../StyledTag';
@@ -45,6 +44,8 @@ const msg = defineMessages({
     defaultMessage: '{name} has been rejected',
   },
 });
+
+const APPLICATION_DATA_AMOUNT_FIELDS = ['totalAmountRaised', 'totalAmountToBeRaised'];
 
 const ACTIONS = ProcessHostApplicationAction;
 
@@ -205,6 +206,7 @@ function HostApplication({
           title={
             <FormattedMessage
               defaultMessage="Application <ApplicationId></ApplicationId> to <HostCollectiveName></HostCollectiveName>"
+              id="pCDDhq"
               values={{
                 ApplicationId: () => (
                   <StyledTag display="inline-block" verticalAlign="middle" mx={1} fontSize="12px">
@@ -224,7 +226,7 @@ function HostApplication({
 
         <InfoList className="sm:grid-cols-2">
           <InfoListItem
-            title={<FormattedMessage defaultMessage="Account" />}
+            title={<FormattedMessage defaultMessage="Account" id="TwyMau" />}
             value={
               <LinkCollective
                 collective={application.account}
@@ -252,7 +254,10 @@ function HostApplication({
                     <StyledTooltip
                       noArrow
                       content={
-                        <FormattedMessage defaultMessage="This collective doesn’t satisfy the minimum admin requirements as admin invitations are still pending." />
+                        <FormattedMessage
+                          defaultMessage="This collective doesn’t satisfy the minimum admin requirements as admin invitations are still pending."
+                          id="Lg6nmh"
+                        />
                       }
                     >
                       <div>
@@ -361,6 +366,7 @@ function HostApplication({
                 intl.formatMessage({
                   defaultMessage:
                     'You can not approve this collective as it doesn’t satisfy the minimum admin policy set by you.',
+                  id: 'mqX77s',
                 })
               }
               onApprove={() => processApplication(ACTIONS.APPROVE)}

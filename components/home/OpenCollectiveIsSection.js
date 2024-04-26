@@ -28,13 +28,10 @@ const OpenCollectiveIs = () => {
       <Flex px="16px" justifyContent="center" alignItems="center">
         <Box width={['288px', 1]} mb="135px">
           <SectionTitle textAlign="center" mb={3}>
-            <FormattedMessage id="home.OCIs" defaultMessage={'Open Collective is'} />
+            <FormattedMessage id="home.OCIs" defaultMessage="Open Collective is" />
           </SectionTitle>
           <SectionDescription textAlign="center">
-            <FormattedMessage
-              id="home.OCIs.description"
-              defaultMessage={'…an open finances platform for communities.'}
-            />
+            <FormattedMessage id="home.OCIs.description" defaultMessage="…an open finances platform for communities." />
           </SectionDescription>
         </Box>
       </Flex>
@@ -81,7 +78,7 @@ const OpenCollectiveIs = () => {
             >
               <FormattedMessage
                 defaultMessage={
-                  'And a network of fiscal hosts that enable over 500 collectives in Africa to spend and raise'
+                  'And a network of fiscal hosts that enable collectives in Africa to spend and raise money'
                 }
               />
             </P>

@@ -40,6 +40,7 @@ const headerMessages = defineMessages({
   },
   [SUCCESS_CTA_TYPE.GO_TO_PROFILE]: {
     defaultMessage: "Go to {accountName}'s page",
+    id: 'iPy92R',
   },
 });
 
@@ -63,6 +64,7 @@ const contentMessages = defineMessages({
   },
   [SUCCESS_CTA_TYPE.GO_TO_PROFILE]: {
     defaultMessage: 'Go to the public page of {accountName} on Open Collective',
+    id: '/aBz/1',
   },
 });
 
@@ -125,7 +127,7 @@ const SuccessCTAWrapper = ({ type, orderId, email, account, ...props }) => {
         />
       );
     case SUCCESS_CTA_TYPE.BLOG:
-      return <StyledLink href="https://blog.opencollective.com" openInNewTab color="black.800" {...props} />;
+      return <StyledLink href="https://blog.doohi.org" openInNewTab color="black.800" {...props} />;
     case SUCCESS_CTA_TYPE.GO_TO_PROFILE:
       return <StyledLink as={Link} href={getCollectivePageRoute(account)} color="black.800" {...props} />;
     default:

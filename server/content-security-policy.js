@@ -28,11 +28,13 @@ const COMMON_DIRECTIVES = {
     UNSAFE_INLINE, // For styled-components. TODO: Limit for nonce
     'https://hcaptcha.com',
     'https://*.hcaptcha.com',
+    'https://challenges.cloudflare.com',
   ],
   connectSrc: [
     SELF,
     process.env.API_URL,
     process.env.PDF_SERVICE_URL,
+    process.env.NEXT_PDF_SERVICE_URL,
     process.env.REST_URL,
     process.env.ML_SERVICE_URL,
     'wtfismyip.com',
@@ -49,10 +51,11 @@ const COMMON_DIRECTIVES = {
     'https://sandbox.transferwise.tech',
     'https://hcaptcha.com',
     'https://*.hcaptcha.com',
+    'https://challenges.cloudflare.com',
     'https://www.google.com',
     'https://api.cryptonator.com',
     'https://plausible.io',
-  ],
+  ].filter(Boolean),
   scriptSrc: [
     SELF,
     UNSAFE_INLINE, // Required by current PayPal integration. https://developer.paypal.com/docs/checkout/troubleshoot/support/#browser-features-and-polyfills provides a way to deal with that through nonces.
@@ -64,6 +67,7 @@ const COMMON_DIRECTIVES = {
     'https://hcaptcha.com',
     'https://js.hcaptcha.com',
     'https://*.hcaptcha.com',
+    'https://challenges.cloudflare.com',
     'https://www.google.com',
     'https://plausible.io',
   ],
@@ -83,6 +87,7 @@ const COMMON_DIRECTIVES = {
     'https://sandbox.transferwise.tech',
     'https://hcaptcha.com',
     'https://*.hcaptcha.com',
+    'https://challenges.cloudflare.com',
     'https://www.google.com',
   ],
   objectSrc: ['opencollective.com'],

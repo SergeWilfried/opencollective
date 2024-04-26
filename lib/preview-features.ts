@@ -6,6 +6,7 @@ export enum PREVIEW_FEATURE_KEYS {
   COLLECTIVE_OVERVIEW = 'COLLECTIVE_OVERVIEW',
   NEW_EXPENSE_FLOW = 'NEW_EXPENSE_FLOW',
   HOST_REPORTS = 'HOST_REPORTS',
+  TAX_FORMS = 'TAX_FORMS',
 }
 
 export type PreviewFeature = {
@@ -50,9 +51,16 @@ export const previewFeatures: PreviewFeature[] = [
     key: PREVIEW_FEATURE_KEYS.HOST_REPORTS,
     title: 'New Host Transactions Report',
     description:
-      'A new report that sums up all transactions to create a comprehensive overview of all activity, both for managed funds and operational funds.',
+      'A new report that sums up all transactions to create a comprehensive overview of all activity in your account.',
+    publicBeta: true,
+    alwaysEnableInDev: true,
+  },
+  {
+    key: PREVIEW_FEATURE_KEYS.TAX_FORMS,
+    title: 'Tax Forms Admin',
+    description: 'Dashboard section for managing tax forms',
     publicBeta: false,
     alwaysEnableInDev: true,
-    closedBetaAccessFor: ['opencollective', 'opensource', 'europe', 'design', 'engineering'],
+    closedBetaAccessFor: ['opencollective', 'opensource'],
   },
 ];

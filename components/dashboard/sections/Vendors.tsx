@@ -67,6 +67,7 @@ const dashboardVendorsQuery = gql`
           expensePolicy
           settings
           currency
+          requiredLegalDocuments
           features {
             id
             MULTI_CURRENCY_EXPENSES
@@ -146,7 +147,7 @@ const VendorsTable = ({ vendors, loading, editVendor, openVendor, handleSetArchi
           <div className="row flex">
             {vendor.vendorInfo?.taxFormRequired && isEmpty(vendor.vendorInfo?.taxFormUrl) && (
               <span className="mr-2 rounded-sm bg-yellow-300 px-2 py-1 text-xs font-bold text-slate-800">
-                <FormattedMessage defaultMessage="Pending tax form" />
+                <FormattedMessage defaultMessage="Pending tax form" id="P6R0T+" />
               </span>
             )}
             <DropdownMenu>
@@ -220,7 +221,7 @@ const OrgsTable = ({ orgs, loading, openOrg }) => {
               <DropdownMenuContent>
                 <DropdownMenuItem className="cursor-pointer" onClick={() => openOrg(org)}>
                   <Pencil className="mr-2" size="16" />
-                  <FormattedMessage defaultMessage="See Details" />
+                  <FormattedMessage defaultMessage="See Details" id="LYgmWx" />
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -255,10 +256,10 @@ type FilterValues = z.infer<typeof schema>;
 const filters: FilterComponentConfigs<FilterValues> = {
   searchTerm: searchFilter.filter,
   isArchived: {
-    labelMsg: defineMessage({ defaultMessage: 'Archived' }),
+    labelMsg: defineMessage({ defaultMessage: 'Archived', id: '0HT+Ib' }),
   },
   includePotentialVendors: {
-    labelMsg: defineMessage({ defaultMessage: 'Include potential vendors' }),
+    labelMsg: defineMessage({ defaultMessage: 'Include potential vendors', id: '4u4DgT' }),
   },
 };
 
@@ -267,19 +268,19 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
   const views: Views<FilterValues> = [
     {
       id: VendorsTab.ALL,
-      label: intl.formatMessage({ defaultMessage: 'All' }),
+      label: intl.formatMessage({ defaultMessage: 'All', id: 'zQvVDJ' }),
       filter: {},
     },
     {
       id: VendorsTab.ARCHIVED,
-      label: intl.formatMessage({ defaultMessage: 'Archived' }),
+      label: intl.formatMessage({ defaultMessage: 'Archived', id: '0HT+Ib' }),
       filter: {
         isArchived: true,
       },
     },
     {
       id: VendorsTab.POTENTIAL_VENDORS,
-      label: intl.formatMessage({ defaultMessage: 'Potential vendors' }),
+      label: intl.formatMessage({ defaultMessage: 'Potential vendors', id: 'I5Wgky' }),
       filter: {
         includePotentialVendors: true,
       },
@@ -335,7 +336,7 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
   return (
     <div className="flex max-w-screen-lg flex-col gap-4">
       <DashboardHeader
-        title={<FormattedMessage defaultMessage="Vendors" />}
+        title={<FormattedMessage defaultMessage="Vendors" id="RilevA" />}
         description={
           <FormattedMessage
             id="Vendors.Description"
@@ -345,7 +346,7 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
         actions={
           <Button size="sm" className="gap-1" onClick={() => setCreateEditVendor(true)}>
             <span>
-              <FormattedMessage defaultMessage="Create vendor" />
+              <FormattedMessage defaultMessage="Create vendor" id="jrCJwo" />
             </span>
             <PlusIcon size={20} />
           </Button>
@@ -365,7 +366,7 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
               </p>
               <p className="mt-3">
                 <Button variant="link" className="h-fit p-0 text-xs" onClick={dismiss}>
-                  <FormattedMessage defaultMessage="Ok, don't show me this again" />
+                  <FormattedMessage defaultMessage="Ok, don't show me this again" id="ggjoaY" />
                 </Button>
               </p>
             </MessageBox>
@@ -404,6 +405,7 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
         <StyledModal onClose={closeDrawer} width="570px">
           <VendorForm
             host={host}
+            supportsTaxForm={host.requiredLegalDocuments.includes('US_TAX_FORM')}
             onSuccess={() => {
               setCreateEditVendor(false);
               refetch();
@@ -423,6 +425,7 @@ const Vendors = ({ accountSlug }: DashboardSectionProps) => {
         {createEditVendor && (
           <VendorForm
             host={host}
+            supportsTaxForm={host.requiredLegalDocuments.includes('US_TAX_FORM')}
             vendor={typeof createEditVendor === 'boolean' ? undefined : createEditVendor}
             onSuccess={() => {
               setCreateEditVendor(false);

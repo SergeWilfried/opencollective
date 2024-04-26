@@ -78,10 +78,6 @@ const CollectHostPageLink = styled(StyledLink)`
 `;
 
 const messages = defineMessages({
-  OCF: {
-    id: 'OCF.description',
-    defaultMessage: 'For US charity initiatives',
-  },
   OSC: {
     id: 'OSC.description',
     defaultMessage: 'For open source projects',
