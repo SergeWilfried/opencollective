@@ -110,6 +110,7 @@ const ValueContainer = ({ children, ...rest }: ValueContainerProps) => {
           <u>
             <FormattedMessage
               defaultMessage="and {selectedCount} others"
+              id="vpMxUJ"
               values={{ selectedCount: selectedCount - 1 }}
             />
           </u>
@@ -218,7 +219,7 @@ export const makeStyledSelect = SelectComponent => styled(SelectComponent).attrs
           (element as HTMLElement).focus();
         }
 
-        onBlur?.();
+        onBlur?.(event);
       },
       styles: {
         valueContainer: baseStyles => {

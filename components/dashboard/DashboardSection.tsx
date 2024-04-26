@@ -26,10 +26,12 @@ import HostDashboardAgreements from './sections/HostDashboardAgreements';
 import HostVirtualCardRequests from './sections/HostVirtualCardRequests';
 import HostVirtualCards from './sections/HostVirtualCards';
 import InvoicesReceipts from './sections/invoices-receipts/InvoicesReceipts';
+import HostDashboardTaxForms from './sections/legal-documents/HostDashboardTaxForms';
 import NotificationsSettings from './sections/NotificationsSettings';
 import Overview from './sections/overview/Overview';
 import HostDashboardReports from './sections/reports/HostDashboardReports';
-import PreviewHostReports from './sections/reports/preview/HostReports';
+import PreviewReports from './sections/reports/preview/Reports';
+import { TaxInformationSettingsSection } from './sections/tax-information';
 import Team from './sections/Team';
 import AccountTransactions from './sections/transactions/AccountTransactions';
 import HostTransactions from './sections/transactions/HostTransactions';
@@ -44,6 +46,7 @@ const DASHBOARD_COMPONENTS = {
   [SECTIONS.HOST_FINANCIAL_CONTRIBUTIONS]: HostFinancialContributions,
   [SECTIONS.HOST_EXPENSES]: HostExpenses,
   [SECTIONS.HOST_AGREEMENTS]: HostDashboardAgreements,
+  [SECTIONS.HOST_TAX_FORMS]: HostDashboardTaxForms,
   [SECTIONS.HOST_APPLICATIONS]: HostApplications,
   [SECTIONS.REPORTS]: HostDashboardReports,
   [SECTIONS.HOST_VIRTUAL_CARDS]: HostVirtualCards,
@@ -64,6 +67,7 @@ const DASHBOARD_COMPONENTS = {
 const SETTINGS_COMPONENTS = {
   [SETTINGS_SECTIONS.INVOICES_RECEIPTS]: InvoicesReceipts,
   [SETTINGS_SECTIONS.NOTIFICATIONS]: NotificationsSettings,
+  [SETTINGS_SECTIONS.TAX_INFORMATION]: TaxInformationSettingsSection,
 };
 
 const DashboardSection = ({ account, isLoading, section, subpath }) => {
@@ -84,7 +88,7 @@ const DashboardSection = ({ account, isLoading, section, subpath }) => {
   if (DashboardComponent) {
     if (section === SECTIONS.REPORTS) {
       if (LoggedInUser.hasPreviewFeatureEnabled(PREVIEW_FEATURE_KEYS.HOST_REPORTS)) {
-        DashboardComponent = PreviewHostReports;
+        DashboardComponent = PreviewReports;
       }
     }
     return (
@@ -115,7 +119,6 @@ const DashboardSection = ({ account, isLoading, section, subpath }) => {
         <OCFBannerWithData isDashboard collective={account} hideNextSteps={section === 'host'} />
         <SettingsComponent account={account} accountSlug={account.slug} subpath={subpath} />
       </div>
-      // </div>
     );
   }
 

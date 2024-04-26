@@ -1,39 +1,31 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import { getPayoutProfiles } from '../../lib/expenses';
+import { getExpenseExchangeRateWarningOrError } from '../expenses/lib/utils';
 
 import { AccountHoverCard } from '../AccountHoverCard';
+import AmountWithExchangeRateInfo from '../AmountWithExchangeRateInfo';
 import Avatar from '../Avatar';
 import DateTime from '../DateTime';
 import ExpenseAmountBreakdown from '../expenses/ExpenseAmountBreakdown';
 import ExpenseAttachedFiles from '../expenses/ExpenseAttachedFiles';
+import PayoutMethodData from '../expenses/PayoutMethodData';
 import FormattedMoneyAmount from '../FormattedMoneyAmount';
 import PrivateInfoIcon from '../icons/PrivateInfoIcon';
 import LinkCollective from '../LinkCollective';
 import LocationAddress from '../LocationAddress';
-import { StepListItem } from '../ui/StepList';
+import { PayoutMethodLabel } from '../PayoutMethodLabel';
 import UploadedFilePreview from '../UploadedFilePreview';
 
-import { PaymentMethodDetails, PayoutMethodLabel } from './PickPaymentMethodStep';
-import { ExpenseStepDefinition } from './Steps';
+import { InvitedPayeeLabel } from './InvitedPayeeLabel';
 import { ExpenseForm, ExpenseItem } from './useExpenseForm';
 
 type ExpenseSummaryFormProps = {
   form: ExpenseForm;
-  slug: string;
 };
 
-export const ExpenseSummaryStep: ExpenseStepDefinition = {
-  Form: ExpenseSummaryForm,
-  StepListItem: ExpenseSummaryStepListItem,
-  hasError() {
-    return false;
-  },
-  stepTitle: <FormattedMessage id="Summary" defaultMessage="Summary" />,
-};
-
-function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
+export function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
   const loggedInAccount = props.form.options.loggedInAccount;
   const payoutMethod = React.useMemo(() => {
     const profiles = getPayoutProfiles(loggedInAccount);
@@ -50,10 +42,18 @@ function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
 
   const submitter = props.form.options.submitter;
 
+  const invitePayee = props.form.values.invitePayee;
+  const invitePayoutMethod = invitePayee && 'payoutMethod' in invitePayee ? invitePayee.payoutMethod : null;
+
+  const taxes = React.useMemo(
+    () => (props.form.values.tax ? [{ ...props.form.values.tax, type: props.form.options.taxType }] : []),
+    [props.form.values.tax, props.form.options.taxType],
+  );
+
   return (
     <div>
       <h1 className="mb-4 text-lg font-bold leading-[26px] text-dark-900">
-        <FormattedMessage defaultMessage="Expense details" />
+        <FormattedMessage defaultMessage="Expense details" id="AFIpJd" />
       </h1>
       <div className="rounded-lg border border-slate-200 p-8">
         <h1 className="mb-4 text-lg font-bold leading-[26px] text-dark-900">{props.form.values.title}</h1>
@@ -113,16 +113,16 @@ function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
 
         <div className="mb-4 flex items-center gap-2">
           <span className="font-bold">
-            <FormattedMessage defaultMessage="Expense items" />
+            <FormattedMessage defaultMessage="Expense items" id="3ldWIL" />
           </span>
           <hr className="flex-grow border-neutral-300" />
         </div>
 
-        <div className="mb-8 flex flex-col gap-2 text-sm">
+        <div className="mb-8 flex flex-col gap-4 text-sm">
           {(props.form.values.expenseItems || []).map((ei, i) => (
             // index is the only stable key available here
             // eslint-disable-next-line react/no-array-index-key
-            <ExpenseItemSummary key={i} expenseItem={ei} />
+            <ExpenseItemSummary key={i} currency={props.form.values.expenseCurrency} expenseItem={ei} />
           ))}
         </div>
 
@@ -130,7 +130,7 @@ function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
           <ExpenseAmountBreakdown
             currency={props.form.values.expenseCurrency}
             items={(props.form.values.expenseItems || []).map(ei => ({ ...ei, amountV2: ei.amount }))}
-            taxes={props.form.values.tax ? [{ ...props.form.values.tax, type: props.form.options.taxType }] : []}
+            taxes={taxes}
           />
         </div>
 
@@ -149,22 +149,22 @@ function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
 
         <div className="mb-4 flex items-center gap-2">
           <span className="font-bold">
-            <FormattedMessage defaultMessage="Additional information" />
+            <FormattedMessage defaultMessage="Additional information" id="gh/lBJ" />
           </span>
           <hr className="flex-grow border-neutral-300" />
         </div>
 
-        <div className="grid grid-flow-col grid-cols-1 grid-rows-3 gap-1 sm:grid-cols-3 sm:grid-rows-1">
+        <div className="grid grid-flow-col grid-cols-1 grid-rows-[repeat(3,auto)] gap-1 sm:grid-cols-3 sm:grid-rows-1">
           <div className="flex-1 rounded border border-slate-200 p-4">
             <div className="mb-3 text-xs font-medium uppercase text-slate-700">
-              <FormattedMessage id="Collective" defaultMessage="Collective" />
+              <FormattedMessage defaultMessage="Who is paying?" id="IdR7BG" />
             </div>
             <span className="mb-3 flex items-center gap-2 text-sm font-medium leading-5 text-slate-800">
               <Avatar collective={account} radius={24} />
               {account?.name}
             </span>
             <div className="text-sm font-bold text-slate-700">
-              <FormattedMessage defaultMessage="Collective balance" />
+              <FormattedMessage defaultMessage="Collective balance" id="np7zcI" />
             </div>
             <div className="text-sm">
               <FormattedMoneyAmount
@@ -180,53 +180,58 @@ function ExpenseSummaryForm(props: ExpenseSummaryFormProps) {
               <FormattedMessage id="Expense.PayTo" defaultMessage="Pay to" />
             </div>
             <div className="mb-3 flex items-center gap-2 text-sm font-medium leading-5 text-slate-800">
-              <Avatar collective={payee} radius={24} />
-              {payee?.name}
+              {payee ? (
+                <React.Fragment>
+                  <Avatar collective={payee} radius={24} />
+                  <span className="overflow-hidden text-ellipsis">{payee?.name}</span>
+                </React.Fragment>
+              ) : invitePayee ? (
+                <InvitedPayeeLabel invitePayee={invitePayee} />
+              ) : null}
             </div>
-            <div>
-              <span className="mb-3 text-sm font-bold text-slate-700">
-                <FormattedMessage defaultMessage="Private address" /> <PrivateInfoIcon />
-              </span>
-            </div>
-            <div>
-              <LocationAddress location={payee?.location} />
-            </div>
+            {payee?.location && (
+              <React.Fragment>
+                <div>
+                  <span className="mb-3 text-sm font-bold text-slate-700">
+                    <FormattedMessage defaultMessage="Private address" id="RmME7+" /> <PrivateInfoIcon />
+                  </span>
+                </div>
+                <div>
+                  <LocationAddress location={payee?.location} />
+                </div>
+              </React.Fragment>
+            )}
           </div>
 
-          <div className="flex-1 rounded border border-slate-200 p-4">
-            <div className="mb-3 text-xs font-medium uppercase text-slate-700">
-              <FormattedMessage id="SecurityScope.PayoutMethod" defaultMessage="Payout Method" />
+          {(payoutMethod || invitePayoutMethod) && (
+            <div className="flex-1 rounded border border-slate-200 p-4">
+              <div className="mb-3 text-xs font-medium uppercase text-slate-700">
+                <FormattedMessage id="SecurityScope.PayoutMethod" defaultMessage="Payout Method" />
+              </div>
+              <div className="mb-3 overflow-hidden text-ellipsis">
+                <PayoutMethodLabel showIcon payoutMethod={payoutMethod || invitePayoutMethod} />
+              </div>
+              <div>
+                <span className="mb-3 text-sm font-bold text-slate-700">
+                  <FormattedMessage id="Details" defaultMessage="Details" /> <PrivateInfoIcon />
+                </span>
+              </div>
+              <div className="flex flex-col gap-1 overflow-hidden">
+                <PayoutMethodData showLabel={false} payoutMethod={payoutMethod || invitePayoutMethod} />
+              </div>
             </div>
-            <div className="mb-3 overflow-hidden text-ellipsis">
-              <PayoutMethodLabel payoutMethod={payoutMethod} />
-            </div>
-            <div>
-              <span className="mb-3 text-sm font-bold text-slate-700">
-                <FormattedMessage id="Details" defaultMessage="Details" /> <PrivateInfoIcon />
-              </span>
-            </div>
-            <div className="flex flex-col gap-1">
-              <PaymentMethodDetails payoutMethod={payoutMethod} />
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
   );
 }
 
-function ExpenseSummaryStepListItem(props: { className?: string; form: ExpenseForm; current: boolean }) {
-  return (
-    <StepListItem
-      className={props.className}
-      title={ExpenseSummaryStep.stepTitle}
-      completed={props.current}
-      current={props.current}
-    />
-  );
-}
+function ExpenseItemSummary(props: { expenseItem: ExpenseItem; currency: string }) {
+  const intl = useIntl();
 
-function ExpenseItemSummary(props: { expenseItem: ExpenseItem }) {
+  const isOtherCurrency = props.currency !== props.expenseItem.amount.currency;
+
   return (
     <div className="flex justify-between gap-4">
       {props.expenseItem.url && (
@@ -241,16 +246,34 @@ function ExpenseItemSummary(props: { expenseItem: ExpenseItem }) {
       )}
 
       <div className="flex flex-grow flex-col justify-between">
-        <div className="">{props.expenseItem.description}</div>
-        <div>
-          <DateTime value={props.expenseItem.date} dateStyle="medium" />
+        <div className="font-medium">{props.expenseItem.description}</div>
+        <div className="text-xs italic">
+          <DateTime value={props.expenseItem.incurredAt} dateStyle="medium" />
         </div>
       </div>
-      <div className="self-center">
+      <div className="self-center text-right">
         <FormattedMoneyAmount
-          amount={props.expenseItem.amount.valueInCents}
-          currency={props.expenseItem.amount.currency}
+          amount={
+            isOtherCurrency
+              ? Math.round(props.expenseItem.amount.valueInCents * props.expenseItem.amount.exchangeRate.value)
+              : props.expenseItem.amount.valueInCents
+          }
+          currency={props.currency}
         />
+        {isOtherCurrency && (
+          <div className="mt-1 text-xs">
+            <AmountWithExchangeRateInfo
+              amount={props.expenseItem.amount as any}
+              invertIconPosition
+              amountStyles={{ letterSpacing: 0 }}
+              {...getExpenseExchangeRateWarningOrError(
+                intl,
+                props.expenseItem.amount.exchangeRate,
+                props.expenseItem.amount.referenceExchangeRate,
+              )}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

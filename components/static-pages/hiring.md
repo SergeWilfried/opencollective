@@ -86,6 +86,7 @@ A few more notes about our team:
 
 We’d love to hear from you. Applications are open through June 2nd. [To apply](https://coda.io/form/Application-Open-Collective-Customer-Support-Representative_dJ3tGEm2kIw). If you have any questions, reach out to us at [assistance@doohi.com](mailto:assistance@doohi.com).-->
 
+<<<<<<< HEAD
 <!--## [Open Collective Foundation](https://opencollective.foundation/): Finance Admin
 
 $60k/year for 40 hrs/wk (or 30 hrs/wk pro rata). Must live in the US. Applications open until March 24th.
@@ -147,6 +148,8 @@ An operations and community-oriented person who is:
 
 If you have questions, reach out to [contact@opencollective.foundation](mailto:contact@opencollective.foundation)-->
 
+=======
+>>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
 <!-- ## [Open Source Collective](https://www.oscollective.org/): Operations Coordinator
 
 $60 ~ $80k yearly salary for 40 hrs/wk. Salary range contingent on experience.

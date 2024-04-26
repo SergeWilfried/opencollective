@@ -12,6 +12,7 @@ import { Box, Flex } from '../Grid';
 import StyledCard from '../StyledCard';
 import { P } from '../Text';
 
+import { SubmittedExpenseListItem } from './list/SubmittedExpenseListItem';
 import ExpenseDrawer from './ExpenseDrawer';
 
 const ExpenseContainer = styled.div`
@@ -78,6 +79,7 @@ const ExpensesList = ({
   useDrawer,
   setOpenExpenseLegacyId,
   openExpenseLegacyId,
+  onDuplicateClick,
 }) => {
   // Initial values for expense in drawer
   const expenseInDrawer = React.useMemo(() => {
@@ -112,21 +114,31 @@ const ExpensesList = ({
         <FlipMove enterAnimation="fade" leaveAnimation="fade" disableAllAnimations={DISABLE_ANIMATIONS}>
           {expenses.map((expense, idx) => (
             <ExpenseContainer key={expense.id} isFirst={!idx} data-cy={`expense-${expense.status}`}>
-              <ExpenseBudgetItem
-                isInverted={isInverted}
-                expense={expense}
-                host={host || expense.host}
-                showProcessActions
-                view={view}
-                onDelete={onDelete}
-                onProcess={onProcess}
-                selected={openExpenseLegacyId === expense.legacyId}
-                expandExpense={e => {
-                  e.preventDefault();
-                  setOpenExpenseLegacyId(expense.legacyId);
-                }}
-                useDrawer={useDrawer}
-              />
+              {view === 'submitter-new' ? (
+                <SubmittedExpenseListItem
+                  expense={expense}
+                  onDuplicateClick={onDuplicateClick}
+                  onClick={() => {
+                    setOpenExpenseLegacyId(expense.legacyId);
+                  }}
+                />
+              ) : (
+                <ExpenseBudgetItem
+                  isInverted={isInverted}
+                  expense={expense}
+                  host={host || expense.host}
+                  showProcessActions
+                  view={view}
+                  onDelete={onDelete}
+                  onProcess={onProcess}
+                  selected={openExpenseLegacyId === expense.legacyId}
+                  expandExpense={e => {
+                    e.preventDefault();
+                    setOpenExpenseLegacyId(expense.legacyId);
+                  }}
+                  useDrawer={useDrawer}
+                />
+              )}
             </ExpenseContainer>
           ))}
         </FlipMove>
@@ -192,6 +204,7 @@ ExpensesList.propTypes = {
   useDrawer: PropTypes.bool,
   setOpenExpenseLegacyId: PropTypes.func,
   openExpenseLegacyId: PropTypes.number,
+  onDuplicateClick: PropTypes.func,
 };
 
 ExpensesList.defaultProps = {

@@ -11,16 +11,16 @@ exports.REWRITES = [
     destination: '/fiscal-hosting',
   },
   {
+    source: '/tax-form',
+    destination: '/tax-form',
+  },
+  {
     source: '/welcome',
     destination: '/welcome',
   },
   {
     source: '/:pageSlug(widgets|tos|privacypolicy|hiring)',
     destination: '/staticPage',
-  },
-  {
-    source: '/foundation/apply/:step(intro|fees|form|success)',
-    destination: '/ocf-host-application',
   },
   {
     source: '/opensource/apply/:step(intro|pick-repo|fees|form|success)',
@@ -125,10 +125,6 @@ exports.REWRITES = [
   {
     source: '/:parentCollectiveSlug/projects/(new|create)',
     destination: '/create-project',
-  },
-  {
-    source: '/dashboard/:slug/expenses/new',
-    destination: '/submit-expense',
   },
   {
     source: '/dashboard',

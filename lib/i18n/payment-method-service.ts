@@ -1,13 +1,16 @@
+import { startCase } from 'lodash';
 import { defineMessages } from 'react-intl';
+
+import { WebsiteName } from '../../components/I18nFormatters';
 
 import { PAYMENT_METHOD_SERVICE } from '../constants/payment-methods';
 
-const messages = defineMessages({
-  [PAYMENT_METHOD_SERVICE.BANK]: {
-    id: 'paymentMethodService.bank',
-    defaultMessage: 'Bank Account',
+const i18nPaymentMethodServiceLabels = defineMessages({
+  [PAYMENT_METHOD_SERVICE.PREPAID]: {
+    id: 'Prepaid',
+    defaultMessage: 'Prepaid Card',
   },
- 
+
 });
 
 export const i18nPaymentMethodService = (service, intl) => {
@@ -19,6 +22,18 @@ export const i18nPaymentMethodService = (service, intl) => {
     [PAYMENT_METHOD_SERVICE.BANK]: intl.formatMessage(messages[PAYMENT_METHOD_SERVICE.BANK]),
   };
 
-  const i18nMsg = PaymentMethodServiceI18n[service];
-  return i18nMsg || service;
+  switch (service) {
+    case PAYMENT_METHOD_SERVICE.PAYPAL:
+      return 'PayPal';
+    case PAYMENT_METHOD_SERVICE.THEGIVINGBLOCK:
+      return 'The Giving Block';
+    case PAYMENT_METHOD_SERVICE.OPENCOLLECTIVE:
+      return WebsiteName;
+    case PAYMENT_METHOD_SERVICE.BIZAO:
+      return 'Bizao';
+    case PAYMENT_METHOD_SERVICE.PAYSTACK:
+      return 'Paystack';
+    default:
+      return startCase(service.toLowerCase());
+  }
 };
