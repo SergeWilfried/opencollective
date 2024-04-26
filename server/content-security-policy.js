@@ -15,8 +15,8 @@ const COMMON_DIRECTIVES = {
     process.env.NEXT_IMAGES_URL,
     'data:',
     '*.paypal.com',
-    'opencollective.com', // for widgets on /admin/export
-    'blog.opencollective.com', // used to easily link images in static pages
+    'doohi.org', // for widgets on /admin/export
+    'blog.doohi.org', // used to easily link images in static pages
     'blob:', // For upload images previews
   ].filter(Boolean),
   workerSrc: [
@@ -75,7 +75,7 @@ const COMMON_DIRECTIVES = {
     'blob:', // For expense invoice previews in the modal, as they're rendered in a blob
     'www.youtube.com',
     'www.youtube-nocookie.com',
-    'opencollective.com',
+    'doohi.org',
     'anchor.fm',
     'podcasters.spotify.com',
     'player.vimeo.com',
@@ -90,7 +90,7 @@ const COMMON_DIRECTIVES = {
     'https://challenges.cloudflare.com',
     'https://www.google.com',
   ],
-  objectSrc: ['opencollective.com'],
+  objectSrc: ['doohi.org'],
 };
 
 const generateDirectives = customValues => {
@@ -149,8 +149,8 @@ const getContentSecurityPolicyConfig = () => {
         blockAllMixedContent: false,
         scriptSrc: [UNSAFE_INLINE, UNSAFE_EVAL], // For NextJS scripts
         imgSrc: [
-          'opencollective-staging.s3.us-west-1.amazonaws.com',
-          'opencollective-staging.s3-us-west-1.amazonaws.com',
+          'doohi-staging.s3.us-west-1.amazonaws.com',
+          'doohi-staging.s3-us-west-1.amazonaws.com',
         ],
       }),
     };
@@ -159,12 +159,12 @@ const getContentSecurityPolicyConfig = () => {
       reportOnly: false,
       directives: generateDirectives({
         imgSrc: [
-          'opencollective-staging.s3.us-west-1.amazonaws.com',
-          'opencollective-staging.s3-us-west-1.amazonaws.com',
+          'doohi-staging.s3.us-west-1.amazonaws.com',
+          'doohi-staging.s3-us-west-1.amazonaws.com',
         ],
         connectSrc: [
-          'opencollective-staging.s3.us-west-1.amazonaws.com',
-          'opencollective-staging.s3-us-west-1.amazonaws.com',
+          'doohi-staging.s3.us-west-1.amazonaws.com',
+          'doohi-staging.s3-us-west-1.amazonaws.com',
         ],
       }),
       reportUri: ['https://o105108.ingest.sentry.io/api/1736806/security/?sentry_key=2ab0f7da3f56423d940f36370df8d625'],
@@ -174,12 +174,12 @@ const getContentSecurityPolicyConfig = () => {
       reportOnly: false,
       directives: generateDirectives({
         imgSrc: [
-          'opencollective-production.s3.us-west-1.amazonaws.com',
-          'opencollective-production.s3-us-west-1.amazonaws.com',
+          'doohi-production.s3.us-west-1.amazonaws.com',
+          'doohi-production.s3-us-west-1.amazonaws.com',
         ],
         connectSrc: [
-          'opencollective-production.s3.us-west-1.amazonaws.com',
-          'opencollective-production.s3-us-west-1.amazonaws.com',
+          'doohi-production.s3.us-west-1.amazonaws.com',
+          'doohi-production.s3-us-west-1.amazonaws.com',
         ],
       }),
       reportUri: ['https://o105108.ingest.sentry.io/api/1736806/security/?sentry_key=2ab0f7da3f56423d940f36370df8d625'],

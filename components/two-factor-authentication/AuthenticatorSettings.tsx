@@ -26,7 +26,7 @@ function generateNewAuthenticatorAppSecret(email: string) {
   let issuer;
   if (window.location.hostname === 'localhost') {
     issuer = '&issuer=Open%20Collective%20Local';
-  } else if (window.location.hostname === 'staging.opencollective.com') {
+  } else if (window.location.hostname === 'staging.doohi.org') {
     issuer = '&issuer=Open%20Collective%20Staging';
   } else {
     issuer = '&issuer=Open%20Collective';

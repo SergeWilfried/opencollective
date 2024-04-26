@@ -5,7 +5,7 @@ const path = require('path');
 // next.js export
 export default async function handler(req, res) {
   const hostname = req.headers['original-hostname'] || req.hostname;
-  if (hostname !== 'opencollective.com') {
+  if (hostname !== 'doohi.org') {
     res.setHeader('Content-Type', 'text/plain');
     res.send('User-agent: *\nDisallow: /');
   } else {

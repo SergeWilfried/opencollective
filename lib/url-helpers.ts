@@ -159,7 +159,7 @@ const TRUSTED_DOMAINS = [
   'sharedground.co',
   'gatherfor.org',
 ];
-const TRUSTED_ROOT_DOMAINS = ['opencollective.com', 'opencollective.foundation', 'oscollective.org'];
+const TRUSTED_ROOT_DOMAINS = ['doohi.org', 'doohi.foundation', 'oscollective.org'];
 
 export const isTrustedRedirectHost = host => {
   if (TRUSTED_DOMAINS.includes(host)) {

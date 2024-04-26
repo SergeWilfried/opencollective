@@ -198,12 +198,12 @@ const nextConfig = {
           {
             type: 'header',
             key: 'host',
-            value: 'opencollective.com',
+            value: 'doohi.org',
           },
           {
             type: 'header',
             key: 'original-hostname',
-            value: 'opencollective.com',
+            value: 'doohi.org',
           },
         ],
       },
@@ -220,7 +220,7 @@ const nextConfig = {
           {
             type: 'header',
             key: 'host',
-            value: 'next-images.opencollective.com',
+            value: 'next-images.doohi.org',
           },
         ],
       },

@@ -294,7 +294,7 @@ class BannerIframe extends React.Component {
                       values={{ numberOfContributors: data.account.contributors.totalCount }}
                     />
                   </H3>
-                  <StyledLink openInNewTab href={`https://opencollective.com/${this.props.collectiveSlug}`}>
+                  <StyledLink openInNewTab href={`https://doohi.org/${this.props.collectiveSlug}`}>
                     <FormattedMessage
                       id="widget.contributeOnOpenCollective"
                       defaultMessage="Contribute on Open Collective"
@@ -350,7 +350,7 @@ class BannerIframe extends React.Component {
           <title>{`${collectiveSlug} collectives`}</title>
         </Head>
         {backers.organizations + backers.collectives + backers.users === 0 && (
-          <a target="_blank" rel="noopener noreferrer" href={`https://opencollective.com/${collectiveSlug}`}>
+          <a target="_blank" rel="noopener noreferrer" href={`https://doohi.org/${collectiveSlug}`}>
             <ContributeButton />
           </a>
         )}
@@ -369,7 +369,7 @@ class BannerIframe extends React.Component {
             </h2>
             <div className="actions">
               <a
-                href={`https://opencollective.com/${collectiveSlug}`}
+                href={`https://doohi.org/${collectiveSlug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={style.a}
@@ -403,7 +403,7 @@ class BannerIframe extends React.Component {
 
             <div className="actions">
               <a
-                href={`https://opencollective.com/${collectiveSlug}`}
+                href={`https://doohi.org/${collectiveSlug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={style.a}
