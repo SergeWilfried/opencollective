@@ -298,8 +298,8 @@ let exportedConfig = withSentryConfig(
     },
   },
   {
-    org: 'open-collective',
-    project: 'oc-frontend',
+    org: 'studio-bangre',
+    project: 'doohi-front',
     authToken: process.env.SENTRY_AUTH_TOKEN,
     silent: true,
   },
