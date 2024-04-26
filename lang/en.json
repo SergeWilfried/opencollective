@@ -49,14 +49,10 @@
   "03Q893": "This can be edited later",
   "05doZ2": "Go back to all your apps",
   "068S+6": "This collective has Events and Projects that hold members with privileged access roles outside your admin team.",
-<<<<<<< HEAD
   "07Y/8I": "Continue with your Doohi account",
-=======
   "06CHAp": "Expense Payout Method Type",
-  "07Y/8I": "Continue with your Open Collective account",
   "0BeZai": "After that, this expense needs to be reviewed and paid by an admin of {host}",
   "0Eavm2": "Indicates “REFUNDED” if this transaction was refunded (otherwise empty).",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "0eCOkC": "Organization's Detail",
   "0FP/Ii": "Is there anything else you wish to communicate to the admins who will review this expense?",
   "0Hhe6f": "On hold",
@@ -227,12 +223,8 @@
   "8n8mAu": "This account is currently inactive. Please reconnect it to continue using it.",
   "8Np7Fc": "Deactivated as host",
   "8oufoc": "Card name",
-<<<<<<< HEAD
   "8RwcsZ": "Keep track of the latest updates from Doohi.",
-=======
   "8Q0YZb": "Select a different set of filters to enable the transactions export to work.",
-  "8RwcsZ": "Keep track of the latest updates from Open Collective.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "8SQT+a": "Try refining your search, here are some tips:",
   "8TdbVp": "Two factor authentication disabled.",
   "8us97Y": "You can find and track your expense in your dashboard. <Link>Go to expense</Link>.",
@@ -477,10 +469,7 @@
   "becomeAHost.benefit.keepTrack": "Keep track {lineBreak} of all the budgets",
   "becomeAHost.benefit.keepTrack.description": "Create Collectives for as many projects as you need, in a few clicks, at no extra cost. Each has its own page for fundraising, budget tracking, and community engagement. Incoming payments are added to the balance of the right Collective. No spreadsheets required!",
   "becomeAHost.caseStudies.allforclimate-collective": "A fiscal sponsor for your local climate justice group, we act as a shared administrative back office so that local groups can focus on their actions.",
-<<<<<<< HEAD
   "becomeAHost.caseStudies.foundation": "The Doohi Platform provides the tools to more effectively manage group finances. They can offer their donors tax-deductible status without needing to incorporate a legal entity.",
-=======
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "becomeAHost.caseStudies.opensource": "We provide financial and legal infrastructure for thousands of open source projects. We’re an API between the world of distributed collaboration and the world of accounting and invoices.",
   "becomeAHost.caseStudies.socialchangenestcollective": "We have been able to support over 150 Mutual Aid groups to get going quickly by providing them with fiscal hosting back office support.",
   "becomeAHost.caseStudies.wwcode": "Whenever we start a new meetup chapter, we pair it with an Doohi so they have the means to raise money under our umbrella.",
@@ -1597,14 +1586,9 @@
   "fiscalHosting.grantRecipients.description": "Who need a place to receive the funds and hold them as they are spent down.",
   "fiscalHosting.hosts.allForClimate": "Dedicated to movements for climate and social justice. Host to many related communities accros Africa.",
   "fiscalHosting.hosts.OCE": "A Brussels-based nonprofit hosting groups across Europe, including open source projects and community social action.",
-<<<<<<< HEAD
   "fiscalHosting.hosts.OCF": "A US 501(c)(3) nonprofit entity with a broad mission covering most charitable activities in the United States.",
   "fiscalHosting.hosts.OCN": "Offering impact projects fundholding options through a charity or a company structure.",
   "fiscalHosting.hosts.OSC": "A US 501(c)(6) nonprofit entity serving as fiscal host to open source projects and related communities in Africa.",
-=======
-  "fiscalHosting.hosts.OCN": "Offering kiwi impact projects fundholding options through a charity or a company structure.",
-  "fiscalHosting.hosts.OSC": "A US 501(c)(6) nonprofit entity serving as fiscal host to open source projects and related communities around the world.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "fiscalHosting.hosts.socialchangenestcollective": "A UK host for mutual aid groups and social movements, providing tools, strategy, and back office support to scale up and get on with changing the world.",
   "fiscalHosting.howCanAFiscalHostHelp": "How can a fiscal host help?",
   "fiscalHosting.legalStructure": "Legal structure",
@@ -1776,12 +1760,8 @@
   "guestJoin.otherProfilesFound": "We found {count} emails that you used to contribute",
   "guestJoin.select": "Select the email that you want to use for your account:",
   "guestJoin.title": "Join {service}",
-<<<<<<< HEAD
   "GuestProfile.description": "This contributor has not joined Doohi yet",
-=======
-  "GuestProfile.description": "This contributor has not joined Open Collective yet",
   "GUFh1k": "Set name",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "GuPr/j": "Community engagement tools",
   "GW8+0X": "Remove Bank Account",
   "gX79wf": "Unfreeze Collective",
@@ -2384,13 +2364,9 @@
   "MzXqKG": "Total Managed Amount",
   "n+rgej": "Download {format}",
   "n0fdpg": "Save your recovery codes",
-<<<<<<< HEAD
   "N5fOog": "And a network of fiscal hosts that enable over 500 collectives around the world to spend and raise $5M a year.",
-=======
   "n4TOEl": "No legal documents",
   "n5Dv18": "Hey Folks, we are back and ready to receive your contributions again!",
-  "N5fOog": "And a network of fiscal hosts that enable over 15,000 collectives around the world to spend and raise $35M a year.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "n5QvJy": "Start date",
   "n6WiTf": "All countries",
   "N6X6du": "Note added!",
@@ -2519,14 +2495,12 @@
   "OC.tagline": "Make your community sustainable. Collect and spend money transparently.",
   "OC.tos.label": "I agree with the <TOSLink>terms of service</TOSLink> of Doohi.",
   "OCE.description": "For EU-based groups",
-<<<<<<< HEAD
   "OCF.description": "For US charity initiatives",
   "OCFHostApplication.aboutOurFees": "About our fees",
   "OCFHostApplication.aboutOurFees.description": "In order to support you better, we use the Doohi Platform to manage your initiative.",
   "OCFHostApplication.aboutOurFees.note": "*Third-party payment processors (like Stripe and Paypal) charge their own fees. <LearnMoreLink>Learn more</LearnMoreLink>.",
   "OCFHostApplication.aboutOurFees.otherFees": "<strong>**8%</strong> Up to $500k raised. <strong>- 6%</strong> Up to $1 million raised. <strong>- 4%</strong> Over $1 million raised",
   "OCFHostApplication.applicationForm.description": "Grantees and project participants will love the simplicity and accessibility, and you’ll love how much your overhead is reduced.",
-  "OCFHostApplication.applicationForm.emailInstruction": "We will use this email to create your account.",
   "OCFHostApplication.applicationForm.instruction": "All fields are mandatory.",
   "OCFHostApplication.applicationForm.missionInstruction": "Check the sidebar for more info (250 characters max)",
   "OCFHostApplication.applicationForm.title": "About you and your initiative {padlock} {questionMark}",
@@ -2538,13 +2512,10 @@
   "OCFHostApplication.crowdFunding": "Crowdfunding",
   "OCFHostApplication.crowdFunding.description": "On each incoming contribution made via the Doohi Platform",
   "OCFHostApplication.description": "Get your non-profit initiative up and running fast.",
-=======
   "OCFHostApplication.applicationForm.emailInstruction": "We will use this email to create your account.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "OCFHostApplication.expectedFundingPartner.label": "Who do you expect to fund you?",
   "OCFHostApplication.faq.collective.content": "A group seeking to raise and spend money transparently using the Doohi platform, representing a community, project, or initiative.",
   "OCFHostApplication.faq.fiscalHost.content": "A Fiscal Host holds funds on behalf of Collectives, enabling them to operate using the Host's bank account and legal entity.",
-<<<<<<< HEAD
   "OCFHostApplication.faq.informationUsage.content": "This application opens the conversation between your initiative and our team, so please provide us with as many details as you can. If there is sufficient information provided in your application, you may get accepted very quickly!",
   "OCFHostApplication.faq.informationUsage.title": "How is this information used?",
   "OCFHostApplication.faq.missionImpact.content": "<b>Increasing access to educational resources and training:</b> With the advance of technology and the movement towards a society where people work together to enhance and develop the future, there has been an increase in the number of organizations and groups that are coming together to promote education. {lineBreak}{lineBreak} <b>Creating a positive social impact:</b> Sponsor’s social impact purpose is aimed at finding ways to (i) eliminate prejudice and discrimination; (ii) combat community deterioration; (iii) decrease juvenile delinquency; (iv) serve the less fortunate or distressed; (v) serve to prevent animal or child cruelty; or (vi) create a positive impact on society. {lineBreak}{lineBreak} <b>Developing tools to improve civic participation within cities or communities:</b> Sponsor host projects aimed at fostering civic participation, democratic debate and rebuilding community ties and strengths.",
@@ -2553,9 +2524,6 @@
   "OCFHostApplication.howItWorks": "How it works:",
   "OCFHostApplication.howItWorks.list": "• Donations are made to our 501(c)(3) (tax-exempt status applies){lineBreak} • We make a “grant” to your group/project{lineBreak} • We send donors their receipts, disburse funds/reimburse expenses after your approval, send out the tax forms to independent contractors as applicable{lineBreak} • You have complete access to collect, spend, manage your money on our platform.",
   "OCFHostApplication.importance": "It can take years for a group to get 501(c)(3) non-profit status. Fiscal hosts are especially helpful to newly formed nonprofit groups, large and small. We act as a legal entity for your group, organizing the back-end of your fundraising efforts. It’s fast and easy to apply. Once your group is approved, you can begin collecting funds immediately.",
-=======
-  "OCFHostApplication.faq.platform.content": "Platform Tips support development of the Open Collective software platform. Contributors to Collectives see the option to give a voluntary Platform Tip at checkout.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "OCFHostApplication.initiativeDescription.label": "What does your initiative do? (Please describe how you plan to use raised funds)",
   "OCFHostApplication.initiativeDuration.label": "How long has your initiative been running?",
   "OCFHostApplication.initiativeName.label": "What is the name of your initiative?",
@@ -2599,10 +2567,7 @@
   "oocfGT": "Suspicious contribution",
   "ooRGC9": "Money raised",
   "OozR1Y": "Legal name",
-<<<<<<< HEAD
   "OpenCollectiveBalance": "Doohi Balance",
-=======
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "openSourceApply.GithubRepositories.title": "Pick a repository",
   "OptionalFieldLabel": "{field} (optional)",
   "oqqit/": "Info for financial sponsors",
@@ -2673,12 +2638,8 @@
   "p1twtU": "Vendor Contact",
   "P3537s": "Fees & Tips",
   "P3Tk9A": "Please upload the tax form to the <Link>Google Drive Folder</Link>. Copy the link to the file and paste it in the field below.",
-<<<<<<< HEAD
   "p4WWnt": "You can register new apps that you developed using Doohi's API.",
-=======
   "p4M9u0": "A unique identifier provided by the payment processor for a transaction on their platform.",
-  "p4WWnt": "You can register new apps that you developed using Open Collective's API.",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "P4yOzi": "This will inactive your previous recovery codes.",
   "p57bhB": "Virtual card requested",
   "p5Icf1": "Public Expense submission",
@@ -3108,12 +3069,8 @@
   "SendMessageTo": "Send a message to {accountName}",
   "SendMoneyToCollective.btn": "Send {amount} to {collective}",
   "SendVerificationEmail": "Send verification email",
-<<<<<<< HEAD
   "sEP10P": "Create an account in Doohi",
   "SEPADebit": "SEPA Debit",
-=======
-  "sEP10P": "Create an account in Open Collective",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "SeQW9/": "New Collectives Only",
   "ServiceBalance": "{service} balance",
   "setJlw": "The default contribution tier cannot be edited.",
@@ -3342,12 +3299,8 @@
   "TopContributors.Individuals": "Individuals",
   "TopContributors.Organizations": "Organizations",
   "tos": "terms of service",
-<<<<<<< HEAD
   "TOSAndPrivacyPolicyAgreement": "I agree with the {toslink} and {privacylink} of Doohi.",
-=======
-  "TOSAndPrivacyPolicyAgreement": "I agree with the {toslink} and {privacylink} of Open Collective.",
   "total": "total",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "TotalAmount": "Total amount",
   "TotalAmountWithoutFee": "Total amount (without fees)",
   "TotalBalance": "Total Balance",
@@ -3754,12 +3707,8 @@
   "xrcsxW": "New pending <Order>contribution</Order> from <FromAccount></FromAccount> to <Account></Account>",
   "XriXXG": "Separate transactions compatibility",
   "XruSTn": "This event will only be triggered when the activity occurs on {host}'s account, not on its hosted initiatives.",
-<<<<<<< HEAD
   "xSFQtA": "Thank you for your feedback! It will help us improve Doohi.",
-=======
-  "xSFQtA": "Thank you for your feedback! It will help us improve Open Collective.",
   "XSPhX7": "Click to sign",
->>>>>>> 9a7bb7048d06ec2ae4230580d3c420eb20c8f78b
   "xv/T06": "Host Handle",
   "XvKF/A": "Preview Notification",
   "XVzYBE": "Manage members",
