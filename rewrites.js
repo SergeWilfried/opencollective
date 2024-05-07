@@ -344,7 +344,7 @@ exports.REWRITES = [
     source: '/how-it-works',
     destination: '/how-it-works',
   },
-  
+
   {
     source: '/:action(help|contact)/:formConfirmation(success)?',
     destination: '/help-and-support',
@@ -375,7 +375,7 @@ exports.REWRITES = [
   },
   // Root actions
   {
-    source: '/opencollective/root-actions/:section?',
+    source: '/doohi/root-actions/:section?',
     destination: '/root-actions',
   },
   // Terms of services for the host
